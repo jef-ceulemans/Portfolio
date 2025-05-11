@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { Menu, X, Github, Linkedin } from "lucide-react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,7 +42,8 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className="hover:text-yellow-400 transition-colors"
             >
-              <Github size={20} />
+                <FontAwesomeIcon icon={faGithub} size="lg" />
+
             </a>
             <a
               href="https://www.linkedin.com/in/jef-ceulemans-509aa6295/"
@@ -48,7 +51,8 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className="hover:text-yellow-400 transition-colors"
             >
-              <Linkedin size={20} />
+            <FontAwesomeIcon icon={faLinkedin} size="lg" />
+
             </a>
           </div>
         </div>
@@ -58,8 +62,8 @@ export default function Navbar() {
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+{/*           {isOpen ? <X size={28} /> : <Menu size={28} />}
+ */}        </button>
       </div>
 
       {isOpen && (
@@ -85,7 +89,8 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className="hover:text-yellow-400 transition-colors"
             >
-              <Github size={20} />
+              <FontAwesomeIcon icon={faGithub} size="lg" />
+
             </a>
             <a
               href="https://www.linkedin.com/in/jef-ceulemans-509aa6295/"
@@ -93,7 +98,7 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className="hover:text-yellow-400 transition-colors"
             >
-              <Linkedin size={20} />
+              <FontAwesomeIcon icon={faLinkedin} size="lg" />
             </a>
           </div>
         </div>
