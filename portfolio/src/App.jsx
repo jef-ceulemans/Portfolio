@@ -9,26 +9,30 @@ import Courses from './components/courses'
 import Internship from './components/internship'
 import Projects from './components/projects'
 import Footer from './components/footer'
+import Home from './components/home'
 
 function App() {
 
   return (
     <>
       <Header />
+      <section id="home" className="scroll-mt-16">
+        <Home />
+      </section>
       <section id="about_me" className="scroll-mt-16">
         <AboutMe />
-      </section>
-      <section id="contact" className="scroll-mt-13">
-        <Contact />
-      </section>
-      <section id="courses" className="scroll-mt-13">
-        <Courses />
       </section>
       <section id="internship" className="scroll-mt-13">
         <Internship />
       </section>
       <section id="projects" className="scroll-mt-13" >
         <Projects />
+      </section>
+      <section id="courses" className="scroll-mt-13">
+        <Courses />
+      </section>
+      <section id="contact" className="scroll-mt-13">
+        <Contact />
       </section>
       <Footer/>
     </>
