@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faBars,faXmark } from '@fortawesome/free-solid-svg-icons';
 
 
 export default function Navbar() {
@@ -10,16 +11,16 @@ export default function Navbar() {
 
   const links = [
     { name: "About Me", href: "#about_me" },
-    { name: "Contact", href: "#contact" },
-    { name: "Courses", href: "#courses" },
     { name: "Internship", href: "#internship" },
     { name: "Projects", href: "#projects" },
+    { name: "Courses", href: "#courses" },
+    { name: "Contact", href: "#contact" },
   ];
 
   return (
     <nav className="bg-gray-900 text-white sticky top-0 z-50 shadow-md">
-      <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-        <div className="text-sm font-semibold">Jef Ceulemans - Full Stack Developer</div>
+      <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <div className="text-sm font-semibold">Jef Ceulemans - Software Developer</div>
 
         <div className="hidden sm:flex items-center gap-6 text-sm">
           <ul className="flex gap-6">
@@ -62,8 +63,10 @@ export default function Navbar() {
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
-{/*           {isOpen ? <X size={28} /> : <Menu size={28} />}
- */}        </button>
+      {isOpen ? <FontAwesomeIcon icon={faXmark} size="lg"/> : <FontAwesomeIcon icon={faBars} size="lg" />}
+       
+      </button>
+
       </div>
 
       {isOpen && (
