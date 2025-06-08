@@ -1,5 +1,8 @@
 export default function Internship() {
     return (
-            <h1>internship</h1>
+
+        <section>
+            <h2 className="text-4xl">Internship</h2>
+        </section>
     );
 }
