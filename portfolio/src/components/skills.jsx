@@ -4,9 +4,9 @@ import { faMobileScreen, faCode, faDatabase } from '@fortawesome/free-solid-svg-
 import React, { useState } from "react";
 
 function getLevelLabel(value) {
-  if (value >= 85) return "Advanced";
-  if (value >= 65) return "Intermediate";
-  return "Beginner";
+  if (value >= 85) return "Zeer gevorderd";
+  if (value >= 65) return "Gevorderd";
+  return "Beginnend";
 }
 
 export default function Skills() {

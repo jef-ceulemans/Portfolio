@@ -10,10 +10,10 @@ export default function Navbar() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const links = [
-    { name: "About Me", href: "#about_me" },
-    { name: "Internship", href: "#internship" },
-    { name: "Projects", href: "#projects" },
-    { name: "Courses", href: "#courses" },
+    { name: "Over mij", href: "#about_me" },
+    { name: "Stage", href: "#internship" },
+    { name: "Projecten", href: "#projects" },
+    { name: "Cursussen", href: "#courses" },
     { name: "Contact", href: "#contact" },
   ];
 
