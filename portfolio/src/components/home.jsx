@@ -24,7 +24,7 @@ export default function Home() {
             Over mij
         </a>
 
-        <a href="#projects" className="px-6 py-3 bg-yellow-400 text-black rounded-md font-semibold hover:bg-yellow-300 transition" >
+        <a href="#projects" className="px-6 py-3 bg-amber-400 text-black rounded-md font-semibold hover:bg-yellow-300 transition" >
             Bekijk projecten
         </a>
 

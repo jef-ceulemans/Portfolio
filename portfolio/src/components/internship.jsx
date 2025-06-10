@@ -5,12 +5,12 @@ export default function Internship() {
             className="relative text-gray-200 py-16 px-6 sm:px-12 overflow-hidden"
         >
             <div
-                className="absolute inset-0 bg-cover bg-center blur-md scale-105 z-0"
-                style={{ backgroundImage: "url('src/assets/images/homescreen/homescreen.jpg')" }}
+                className="absolute inset-0 bg-cover bg-center blur-md scale-105 z-0 "
+                //style={{ backgroundImage: "url('src/assets/images/homescreen/homescreen.jpg')" }}
                 aria-hidden="true">
             </div>
 
-            <div className="relative z-10 bg-black/70 p-8 sm:p-10 rounded-lg max-w-7xl mx-auto shadow-2xl">
+            <div className="relative z-10 bg-gray-700/70 p-8 sm:p-10 rounded-lg max-w-7xl mx-auto shadow-2xl">
                 <h2 className="text-4xl font-bold mb-8 text-yellow-400 text-center drop-shadow-lg">
                     Stage
                 </h2>

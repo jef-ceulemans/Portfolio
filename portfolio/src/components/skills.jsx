@@ -36,10 +36,10 @@ export default function Skills() {
     <section className="relative text-gray-200 py-16 px-6 sm:px-12 overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center blur-md scale-105 z-0 "
-        style={{ backgroundImage: "url('src/assets/images/aboutMe/skills.jpg')" }}
+       // style={{ backgroundImage: "url('src/assets/images/aboutMe/skills.jpg')" }}
       ></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto">
+      <div className="relative z-10 max-w-7xl mx-auto bg-gray-700/70 p-8 sm:p-10 rounded-lg shadow-lg">
         <h3 className="text-3xl mb-8">Skills</h3>
 
         <h4 className="text-2xl mb-4">Front-end</h4>
@@ -51,7 +51,7 @@ export default function Skills() {
           <SkillCard title="TypeScript" icon={<FontAwesomeIcon icon={faCode} size="sm" />} level = {85} />
           <SkillCard title="D3.JS" icon={<FontAwesomeIcon icon={faCode} size="sm" />} level = {90} />
           <SkillCard
-            title="Tailwind"
+            title="Tailwind CSS"
             icon={
               <svg className="h-6 w-6 inline-block ml-2 text-white" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624

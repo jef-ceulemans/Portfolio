@@ -18,7 +18,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-gray-900 text-white sticky top-0 z-50 shadow-md">
+    <nav className="bg-gray-950 text-white sticky top-0 z-50 shadow-md">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         <div className="text-sm font-semibold">Jef Ceulemans - Software Developer</div>
 
