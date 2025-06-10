@@ -12,9 +12,8 @@ import Footer from './components/footer'
 import Home from './components/home'
 
 function App() {
-
   return (
-    <>
+<div className="bg-gradient-to-b from-gray-800 to-gray-900">
       <Header />
       <section id="home" className="scroll-mt-16">
         <Home />
@@ -34,9 +33,8 @@ function App() {
       <section id="contact" className="scroll-mt-13">
         <Contact />
       </section>
-      <Footer/>
-    </>
+      <Footer />
+    </div>
   );
 }
-
-export default App
+export default App;

@@ -4,7 +4,7 @@ export default function Home() {
     return (
         <>
         <div className="relative w-full h-[94vh]">
-            <img src="src/assets/images/homescreen/homescreen.jpg" alt="homescreen" className="w-full h-full object-cover" />
+            <img src="/assets/images/homescreen/homescreen.jpg" alt="homescreen" className="w-full h-full object-cover" />
 
 
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white bg-black/50 text-center px-4">
@@ -24,7 +24,7 @@ export default function Home() {
             Over mij
         </a>
 
-        <a href="#projects" className="px-6 py-3 bg-yellow-400 text-black rounded-md font-semibold hover:bg-yellow-300 transition" >
+        <a href="#projects" className="px-6 py-3 bg-amber-400 text-black rounded-md font-semibold hover:bg-yellow-300 transition" >
             Bekijk projecten
         </a>
 
