@@ -3,22 +3,22 @@ export default function Courses() {
         {
             title: "COBOL Programming with VSCode",
             institution: "IBM",
-            link: "src/assets/images/certificaten/COBOL_Programming_with_VSCode_Badge20250111-25-opanrd.pdf"
+            link: "/assets/images/certificaten/COBOL_Programming_with_VSCode_Badge20250111-25-opanrd.pdf"
         },
         {
             title: "Kotlin Cursus",
             institution: "Codecademy",
-            link: "src/assets/images/certificaten/CursusKotlin.png"
+            link: "/assets/images/certificaten/CursusKotlin.png"
         },
         {
             title: "Angular Cursus",
             institution: "Sololearn",
-            link: "src/assets/images/certificaten/Jef_Ceulemans_Angular.pdf"
+            link: "/assets/images/certificaten/Jef_Ceulemans_Angular.pdf"
         },
         {
             title: "Kali Linux oefeningen",
             institution: "Coursera",
-            link: "src/assets/images/certificaten/kali.png",
+            link: "/assets/images/certificaten/kali.png",
             note: "Geen officieel certificaat, dit is een screenshot van afgeronde oefeningen."
         },
         {

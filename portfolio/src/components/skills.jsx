@@ -36,7 +36,7 @@ export default function Skills() {
     <section className="relative text-gray-200 py-16 px-6 sm:px-12 overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center blur-md scale-105 z-0 "
-       // style={{ backgroundImage: "url('src/assets/images/aboutMe/skills.jpg')" }}
+       // style={{ backgroundImage: "url('/assets/images/aboutMe/skills.jpg')" }}
       ></div>
 
       <div className="relative z-10 max-w-7xl mx-auto bg-gray-700/70 p-8 sm:p-10 rounded-lg shadow-lg">

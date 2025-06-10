@@ -4,7 +4,7 @@ const projects = [
     {
         id: 1,
         title: "Carpoolapplicatie Axxes",
-        image: "src/assets/images/projects/axxes/homescherm.png",
+        image: "/assets/images/projects/axxes/homescherm.png",
         tech: ["Angular", ".NET 8.0", "MongoDB", "Tailwind CSS"],
         videoPromo: "https://www.youtube.com/embed/-dfTWIm0kos?si=teGnWjUUBSL-AvXq",
         videoDemo: "https://www.youtube.com/embed/zRYgnQqF1L8?si=2Hzew5dVzZDzjREU",
@@ -45,7 +45,7 @@ de backend geïntegreerd, omdat het veiliger is om een API-key daar te bewaren i
     {
         id: 2,
         title: "Festival Neon Nights",
-        image: "src/assets/images/projects/festival/homescherm.png",
+        image: "/assets/images/projects/festival/homescherm.png",
         tech: ["Angular", ".NET 8.0", "MySQL", "Tailwind CSS"],
         description: [
             `Voor het vak Angular kregen we een opdracht in groep om een festivalwebsite te maken. 
@@ -66,11 +66,11 @@ Daarin kon je de planning van de stages per dag zien. Per stage zag je dan een t
          dezelfde kleuren gebruikt zouden worden.`,
         screenshots: [
             {
-                src: "src/assets/images/projects/festival/artistinfo.png",
+                src: "/assets/images/projects/festival/artistinfo.png",
                 caption: "Artiesten info"
             },
             {
-                src: "src/assets/images/projects/festival/planning.png",
+                src: "/assets/images/projects/festival/planning.png",
                 caption: "Planning"
             },
 
@@ -79,7 +79,7 @@ Daarin kon je de planning van de stages per dag zien. Per stage zag je dan een t
     {
         id: 3,
         title: "Auto Scanner",
-        image: "src/assets/images/projects/flutter/homepage.png",
+        image: "/assets/images/projects/flutter/homepage.png",
         tech: ["Flutter", "Unity", "Vuforia AR"],
         videoDemo: "https://www.youtube.com/embed/bijHhvLTaSA?si=xFvhbD0JeBL14J8E",
         description: [
@@ -97,11 +97,11 @@ Daarin kon je de planning van de stages per dag zien. Per stage zag je dan een t
         id: 4,
         title: "WTC Roland",
         url: "https://smob.smobwtcroland.be",
-        image: "src/assets/images/projects/php/homescherm.png",
+        image: "/assets/images/projects/php/homescherm.png",
         tech: ["PHP", "Laravel", "JS", "MySQL", "CSS", "Tailwind CSS"],
         screenshots: [
             {
-                src: "src/assets/images/projects/php/ploegenaanmelden.png",
+                src: "/assets/images/projects/php/ploegenaanmelden.png",
                 caption: "Ploegen aanmelden"
             },
 
@@ -123,7 +123,7 @@ Verder heb ik de ploegen aanmelden pagina ontwikkeld, waar je teams kon aanmelde
         id: 5,
         title: "Receptzoeker",
         videoDemo: "https://www.youtube.com/embed/g0j-W8tAK6A?si=sWGPE0-GfK1U32YW",
-        image: "src/assets/images/projects/recipefinder/recipefinder.png",
+        image: "/assets/images/projects/recipefinder/recipefinder.png",
         tech: ["MAUI", ".NET 8.0", "MySQL"],
         description: [
             `Dit project is een receptzoeker die groenten of fruit herkent en hiervoor recepten toont waar dit ingrediënt in voorkomt. Ook is er een mogelijkheid om een boodschappenlijst te maken. Hiervoor heb ik gebruikgemaakt van MAUI met een API die je boodschappen bijhoudt. Hierbij wordt ook de API van Spoonacular aangeroepen om recepten te krijgen voor het herkende ingrediënt. Voor het herkennen van een ingrediënt heb ik een Azure AI-model getraind. Dit project maakt bovendien gebruik van best practices zoals het Repository Design Pattern en een navigation service
@@ -135,7 +135,7 @@ Verder heb ik de ploegen aanmelden pagina ontwikkeld, waar je teams kon aanmelde
     {
         id: 6,
         title: "Sociale Reisfoto App",
-        image: "src/assets/images/projects/ontwikkeling/ontwikkeling.jpg",
+        image: "/assets/images/projects/ontwikkeling/ontwikkeling.jpg",
         tech: ["React Native", "Python Django", "PostgreSQL", "NativeWind"],
         description: [
             `Dit project is momenteel in ontwikkeling. Ik ben momenteel bezig met het ontwikkelen van een app voor het delen van reisfoto’s. Het idee is dat je je vrienden kunt volgen binnen de app.
@@ -578,7 +578,7 @@ export default function Projects() {
         >
             <div
                 className="absolute inset-0 bg-cover bg-center blur-md scale-105 z-0 "
-                //style={{ backgroundImage: "url('src/assets/images/homescreen/homescreen.jpg')" }}
+                //style={{ backgroundImage: "url('/assets/images/homescreen/homescreen.jpg')" }}
                 aria-hidden="true"
             ></div>
 

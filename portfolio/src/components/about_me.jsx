@@ -8,13 +8,13 @@ export default function AboutMe() {
         <section
             id="about_me"
             className="bg-cover bg-center text-gray-200 py-16 px-6 sm:px-12 "
-            //style={{ backgroundImage: "url('src/assets/images/profile-photo/testen.jpeg')" }}
+            //style={{ backgroundImage: "url('/assets/images/profile-photo/testen.jpeg')" }}
             alt="Profile photo of Jef Ceulemans"
         >
             <div className="bg-gray-700/70 p-8 sm:p-10 rounded-lg max-w-7xl mx-auto shadow-lg relative">
                 <div className="absolute -top-20 left-1/2 transform -translate-x-1/2">
                     <img
-                        src="src/assets/images/profile-photo/testen.jpeg"
+                        src="/assets/images/profile-photo/testen.jpeg"
                         alt="Profile photo of Jef Ceulemans"
                         className="w-40 h-40 mt-6 object-cover rounded-full border-4 border-yellow-400 shadow-md"
                     />
@@ -110,7 +110,7 @@ export default function AboutMe() {
                                 <h3 className="text-xl font-semibold text-yellow-600">Curriculum vitae</h3>
                             </div>
                             <p className="text-gray-700 mb-4">Ontdek meer over mijn opleiding en werkervaring.</p>
-                            <a href="src/assets/documents/cv/Curriculum vitae_Jef Ceulemans.pdf" target="_blank" rel="noopener noreferrer"
+                            <a href="/assets/documents/cv/Curriculum vitae_Jef Ceulemans.pdf" target="_blank" rel="noopener noreferrer"
                                 className="mt-auto w-full block px-6 py-3 bg-yellow-400 text-black text-center rounded-md font-semibold hover:bg-yellow-500 transition"
                             >
                                 Open Curriculum vitae

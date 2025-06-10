@@ -6,7 +6,7 @@ export default function Internship() {
         >
             <div
                 className="absolute inset-0 bg-cover bg-center blur-md scale-105 z-0 "
-                //style={{ backgroundImage: "url('src/assets/images/homescreen/homescreen.jpg')" }}
+                //style={{ backgroundImage: "url('/assets/images/homescreen/homescreen.jpg')" }}
                 aria-hidden="true">
             </div>
 
@@ -61,7 +61,7 @@ export default function Internship() {
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 w-full justify-center items-center">
                             <a
-                                href="/src/assets/documents/stage/ProjectPlan.pdf"
+                                href="/assets/documents/cv/Curriculum vitae_Jef Ceulemans.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-2 px-5 py-3 bg-yellow-400 text-yellow-900 font-semibold rounded-xl shadow-md hover:bg-yellow-500 transition drop-shadow"
@@ -70,7 +70,7 @@ export default function Internship() {
                                 Project Plan
                             </a>
                             <a
-                                href="/src/assets/documents/stage/RealisatieDocument.pdf"
+                                href="/assets/documents/cv/Curriculum vitae_Jef Ceulemans.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-2 px-5 py-3 bg-yellow-400 text-yellow-900 font-semibold rounded-xl shadow-md hover:bg-yellow-500 transition drop-shadow"
@@ -79,7 +79,7 @@ export default function Internship() {
                                 Realisatiedocument (thesis)
                             </a>
                             <a
-                                href="/src/assets/documents/stage/Reflectie.pdf"
+                                href="/assets/documents/cv/Curriculum vitae_Jef Ceulemans.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-2 px-5 py-3 bg-yellow-400 text-yellow-900 font-semibold rounded-xl shadow-md hover:bg-yellow-500 transition drop-shadow"
