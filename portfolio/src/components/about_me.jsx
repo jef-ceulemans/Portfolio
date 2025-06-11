@@ -14,7 +14,7 @@ export default function AboutMe() {
                 <div className="bg-white/10 backdrop-blur-md  p-8 sm:p-10 rounded-lg max-w-7xl mx-auto shadow-lg relative">
                     <div className="absolute -top-20 left-1/2 transform -translate-x-1/2">
                         <img
-                            src="/assets/images/profile-photo/testen.jpeg"
+                            src="/assets/images/profile-photo/testen.jpg"
                             alt="Profile photo of Jef Ceulemans"
                             className="w-40 h-40 mt-6 object-cover rounded-full border-2 border-violet-500 shadow-md"
                         />
