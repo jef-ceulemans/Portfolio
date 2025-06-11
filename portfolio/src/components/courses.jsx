@@ -32,9 +32,9 @@ export default function Courses() {
     ];
 
     return (
-        <section id="courses" className="scroll-mt-16 pb-10 pt-10 px-6 sm:px-12">
+        <section id="courses" className="bg-black/70 scroll-mt-16 pb-10 pt-10 px-6 sm:px-12">
             <div className="max-w-7xl mx-auto">
-                <div className="relative bg-white/10 border border-white/30 p-8 sm:p-10 rounded-2xl shadow-2xl backdrop-blur-md overflow-hidden">
+                <div className="relative   p-8 sm:p-10 rounded-2xl  backdrop-blur-md overflow-hidden">
 
                     <h2 className="text-4xl font-bold text-violet-400 mb-8 text-center">Behaalde Certificaten & Cursussen</h2>
 
