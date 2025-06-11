@@ -141,9 +141,9 @@ function ProjectModal({ project, onClose }) {
 
    if (project.id === 2) {
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-b from-gray-800 to-gray-900 backdrop-blur-sm">
+        <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm">
             <div className="relative z-50 w-full max-w-7xl mx-auto">
-                <div className="m-4 relative bg-white/10 border border-white/30 rounded-2xl p-8 sm:p-10 shadow-2xl max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden">
+                <div className="m-4  mb-10     mt-24 relative bg-black/80 border border-white/30 rounded-2xl p-8 sm:p-10 shadow-2xl max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden">
                     <button
                         onClick={onClose}
                         className="sticky top-0 right-0 ml-auto  z-50 block text-4xl text-yellow-500 hover:text-yellow-400  rounded-full w-12 h-12 flex items-center justify-center p-2"
@@ -199,9 +199,9 @@ function ProjectModal({ project, onClose }) {
 
  if (project.id === 3) {
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-b from-gray-800 to-gray-900 backdrop-blur-sm">
+        <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm">
             <div className="relative z-50 w-full max-w-7xl mx-auto">
-                <div className="m-4 relative bg-white/10 border border-white/30 rounded-2xl p-8 sm:p-10 shadow-2xl max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden">
+                <div className="m-4  mb-10     mt-24 relative bg-black/80 border border-white/30 rounded-2xl p-8 sm:p-10 shadow-2xl max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden">
                     <button
                         onClick={onClose}
                         className="sticky top-0 right-0 ml-auto  z-50 block text-4xl text-yellow-500 hover:text-yellow-400  rounded-full w-12 h-12 flex items-center justify-center p-2"
@@ -265,9 +265,9 @@ function ProjectModal({ project, onClose }) {
 }
     if (project.id === 4) {
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-b from-gray-800 to-gray-900 backdrop-blur-sm">
+        <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm">
             <div className="relative z-50 w-full max-w-7xl mx-auto">
-                <div className="m-4 relative bg-white/10 border border-white/30 rounded-2xl p-8 sm:p-10 shadow-2xl max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden">
+                <div className="m-4  mb-10     mt-24 relative bg-black/80 border border-white/30 rounded-2xl p-8 sm:p-10 shadow-2xl max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden">
                     <button
                         onClick={onClose}
                         className="sticky top-0 right-0 ml-auto  z-50 block text-4xl text-yellow-500 hover:text-yellow-400  rounded-full w-12 h-12 flex items-center justify-center p-2"
@@ -372,9 +372,9 @@ function ProjectModal({ project, onClose }) {
 }
  if (project.id === 5) {
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-b from-gray-800 to-gray-900 backdrop-blur-sm">
+        <div className="fixed inset-0 z-50 flex items-center justify-center  backdrop-blur-sm">
             <div className="relative z-50 w-full max-w-7xl mx-auto">
-                <div className="m-4 relative bg-white/10 border border-white/30 rounded-2xl p-8 sm:p-10 shadow-2xl max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden">
+                <div className="m-4  relative bg-black/80 border border-white/30 rounded-2xl p-8 sm:p-10 shadow-2xl max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden">
                     <button
                         onClick={onClose}
                         className="sticky top-0 right-0 ml-auto z-50 block text-4xl text-yellow-500 hover:text-yellow-400 rounded-full w-12 h-12 flex items-center justify-center p-2"
@@ -431,9 +431,9 @@ function ProjectModal({ project, onClose }) {
 
   if (project.id === 6) {
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-b from-gray-800 to-gray-900 backdrop-blur-sm">
+        <div className="fixed inset-0 z-50 flex items-center justify-center  backdrop-blur-sm">
             <div className="relative z-50 w-full max-w-7xl mx-auto">
-                <div className="m-4 relative bg-white/10 border border-white/30 rounded-2xl p-8 sm:p-10 shadow-2xl max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden">
+                <div className="m-4 relative bg-black/80 border border-white/30 rounded-2xl p-8 sm:p-10 shadow-2xl max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden">
                     <button
                         onClick={onClose}
                         className="sticky top-0 right-0 ml-auto z-50 block text-4xl text-yellow-500 hover:text-yellow-400  rounded-full w-12 h-12 flex items-center justify-center p-2"
@@ -462,10 +462,10 @@ function ProjectModal({ project, onClose }) {
 }
 
    return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-b from-gray-800 to-gray-900 backdrop-blur-sm">
+    <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm">
         <div className="relative z-50 w-full max-w-7xl mx-auto">
             <div
-                className="m-4 relative bg-white/10 border border-white/30 rounded-2xl p-8 sm:p-10 shadow-2xl max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden"
+                className="m-4 mb-10     mt-24 relative bg-black/70 border border-white/30 rounded-2xl p-8 sm:p-10 shadow-2xl max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden"
             >
                 <button
                     onClick={onClose}
@@ -584,7 +584,7 @@ export default function Projects() {
     return (
         <section
             id="projects"
-            className="relative text-gray-200 pb-10 pt-10 px-6 sm:px-12 overflow-hidden "
+            className="bg-black/70 relative text-gray-200 pb-10 pt-10 px-6 sm:px-12 overflow-hidden "
         >
             <div
                 className="absolute inset-0 bg-cover bg-center blur-md scale-105 z-0 "
@@ -592,7 +592,7 @@ export default function Projects() {
                 aria-hidden="true"
             ></div>
 
-            <div className=" z-10 bg-white/10 p-8 sm:p-10 rounded-lg max-w-7xl mx-auto shadow-2xl">
+            <div className=" z-10  p-8 sm:p-10 rounded-lg max-w-7xl mx-auto ">
                 <h2 className="text-4xl font-bold mb-8 text-violet-400 text-center drop-shadow-lg">
                     Projecten
                 </h2>
@@ -601,7 +601,7 @@ export default function Projects() {
                         
                         <div
                             key={project.id}
-                            className="bg-white/10 backdrop-blur-md relative border-white/30 border rounded-2xl shadow-lg p-6  hover:border-violet-400 duration-200 cursor-pointer flex flex-col items-center transition"
+                            className="backdrop-blur-md relative border-white/30 border rounded-2xl shadow-lg p-6  hover:border-violet-400 duration-200 cursor-pointer flex flex-col items-center transition"
                             onClick={() => setSelected(project)}
                             tabIndex={0}
                             aria-label={`Bekijk ${project.title}`}

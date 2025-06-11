@@ -7,11 +7,11 @@ export default function AboutMe() {
         <>
             <section
                 id="about_me"
-                className="bg-cover bg-center text-gray-200 pt-16 pb-6 px-6 sm:px-12 "
+                className="bg-cover bg-center bg-black/70 text-gray-200 pt-30 pb-6 px-6 sm:px-12 "
                 //style={{ backgroundImage: "url('/assets/images/profile-photo/testen.jpeg')" }}
                 alt="Profile photo of Jef Ceulemans"
             >
-                <div className="bg-white/10 backdrop-blur-md  p-8 sm:p-10 rounded-lg max-w-7xl mx-auto shadow-lg relative">
+                <div className=" backdrop-blur-md  p-8 sm:p-10 rounded-lg max-w-7xl mx-auto relative">
                     <div className="absolute -top-20 left-1/2 transform -translate-x-1/2">
                         <img
                             src="/assets/images/profile-photo/testen.jpg"

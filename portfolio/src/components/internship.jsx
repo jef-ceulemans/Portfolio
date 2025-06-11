@@ -5,7 +5,7 @@ export default function Internship() {
     return (
         <section
             id="internship"
-            className="relative text-gray-200 pt-10 pb-10 px-6 sm:px-12 overflow-hidden"
+            className="bg-black/70 relative text-gray-200 pt-10 pb-10 px-6 sm:px-12 overflow-hidden"
         >
             <div
                 className="absolute inset-0 bg-cover bg-center blur-md scale-105 z-0"
@@ -13,12 +13,12 @@ export default function Internship() {
                 aria-hidden="true"
             ></div>
 
-            <div className="relative z-10 bg-white/10 p-8 sm:p-10 rounded-lg max-w-7xl mx-auto shadow-2xl">
+            <div className="relative z-10  p-8 sm:p-10 rounded-lg max-w-7xl mx-auto ">
                 <h2 className="text-4xl font-bold mb-8 text-violet-400 text-center drop-shadow-lg">
                     Stage
                 </h2>
                 <div className="grid gap-8  lg:grid-cols-8">
-                    <div className="relative bg-white/10 border border-white/30 shadow-lg rounded-2xl p-6 backdrop-blur-md overflow-hidden lg:col-span-3 flex flex-col justify-center hover:border-violet-400 transition-colors duration-200">
+                    <div className="relative  border border-white/30 shadow-lg rounded-2xl p-6 backdrop-blur-md overflow-hidden lg:col-span-3 flex flex-col justify-center hover:border-violet-400 transition-colors duration-200">
                         <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
                         <p className="text-gray-200 ">
                             Tijdens mijn stage aan het LaBRI-onderzoeksinstituut (Laboratoire Bordelais de Recherche en Informatique) in Bordeaux ontwikkelde ik samen met medestudent
@@ -32,7 +32,7 @@ export default function Internship() {
                         </p>
                     </div>
 
-                    <div className="relative bg-white/10 border border-white/30 shadow-lg rounded-2xl p-6 backdrop-blur-md overflow-hidden lg:col-span-5 flex flex-col justify-center hover:border-violet-400 transition-colors duration-200">
+                    <div className="relative  border border-white/30 shadow-lg rounded-2xl p-6 backdrop-blur-md overflow-hidden lg:col-span-5 flex flex-col justify-center hover:border-violet-400 transition-colors duration-200">
                         <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
                         <div className="mb-2">
                             <p className="text-gray-200 text-base">
@@ -56,7 +56,7 @@ export default function Internship() {
                         </div>
                     </div>
 
-                    <div className="relative bg-white/10 border border-white/30 shadow-lg rounded-2xl p-8 backdrop-blur-md overflow-hidden max-w-3xl mx-auto lg:col-span-8 flex flex-col items-center justify-center hover:border-yellow-500 transition-colors duration-200">
+                    <div className="relative  border border-white/30 shadow-lg rounded-2xl p-8 backdrop-blur-md overflow-hidden max-w-3xl mx-auto lg:col-span-8 flex flex-col items-center justify-center hover:border-yellow-500 transition-colors duration-200">
                         <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
                         <h3 className="text-xl font-bold text-yellow-500 mb-4 text-center drop-shadow-sm tracking-wide">
                             Stage Documenten

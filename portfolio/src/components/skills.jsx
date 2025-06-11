@@ -13,7 +13,7 @@ export default function Skills() {
   const SkillCard = ({ title, icon, level = 75 }) => {
     const levelLabel = getLevelLabel(level);
     return (
-      <div className="bg-white/10 border-white/30 backdrop-blur-md shadow-lg rounded-2xl p-3 border-1 relative flex flex-col justify-between hover:border-violet-400 transition-colors duration-200">
+      <div className=" border-white/30 backdrop-blur-md shadow-lg rounded-2xl p-3 border-1 relative flex flex-col justify-between hover:border-violet-400 transition-colors duration-200">
         <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40  " />
 
         <h3 className="text-lg font-semibold text-gray-200 mb-3 ">
@@ -35,13 +35,13 @@ export default function Skills() {
   };
 
   return (
-    <section className="relative text-gray-200  pb-10 px-6 sm:px-12 overflow-hidden">
+    <section className="bg-black/70 relative text-gray-200  pb-10 px-6 sm:px-12 overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center blur-md scale-105 z-0 "
       // style={{ backgroundImage: "url('/assets/images/aboutMe/skills.jpg')" }}
       ></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto bg-white/10 p-8 sm:p-10 rounded-lg shadow-lg">
+      <div className="relative z-10 max-w-7xl mx-auto p-8 sm:p-10 rounded-lg ">
         <h3 className="text-3xl text-violet-400 mb-8 text-center font-semibold">Skills</h3>
 
         <h4 className="text-2xl mb-4 text-violet-400">Front-end</h4>

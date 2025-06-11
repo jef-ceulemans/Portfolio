@@ -4,7 +4,6 @@ export default function Home() {
     return (
         <>
         <div className="relative w-full h-[94vh]">
-            <img src="/assets/images/homescreen/homescreen.jpg" alt="homescreen" className="w-full h-full object-cover" />
 
 
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white bg-black/70 text-center px-4">
