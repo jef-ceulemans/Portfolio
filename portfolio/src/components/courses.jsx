@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default function Courses() {
     const certificates = [
         {
@@ -30,26 +32,30 @@ export default function Courses() {
     ];
 
     return (
-        <section id="courses" className="scroll-mt-16 py-16 px-6 sm:px-12">
+        <section id="courses" className="scroll-mt-16 pb-10 pt-10 px-6 sm:px-12">
             <div className="max-w-7xl mx-auto">
-                <div className="bg-gray-700/70 p-8 sm:p-10 rounded-lg shadow-lg">
-                    <h2 className="text-4xl font-bold text-yellow-400 mb-8 text-center">Behaalde Certificaten & Cursussen</h2>
+                <div className="relative bg-white/10 border border-white/30 p-8 sm:p-10 rounded-2xl shadow-2xl backdrop-blur-md overflow-hidden">
+
+                    <h2 className="text-4xl font-bold text-violet-400 mb-8 text-center">Behaalde Certificaten & Cursussen</h2>
+
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {certificates.map((cert, idx) => (
-                            <div key={idx} className="bg-gray-100 shadow-lg rounded-2xl p-6 flex flex-col">
-                                <h3 className="text-xl font-semibold text-gray-900 mb-1">{cert.title}</h3>
-                                <div className="text-sm text-gray-600 mb-2">
+                            <div key={idx} className="relative border border-white/30 shadow-lg rounded-2xl p-6 flex flex-col backdrop-blur-md overflow-hidden hover:border-violet-400 transition-colors duration-200">
+                                <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
+
+                                <h3 className="text-xl font-semibold text-violet-400 mb-1">{cert.title}</h3>
+                                <div className="text-sm text-gray-200 mb-2">
                                     {cert.institution}
                                 </div>
                                 {cert.note && (
-                                    <div className="text-xs text-gray-500 italic mb-2">{cert.note}</div>
+                                    <div className="text-xs text-gray-400 italic mb-2">{cert.note}</div>
                                 )}
                                 {cert.link && (
                                     <a
                                         href={cert.link}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-2 px-4 rounded-md text-center transition w-full mt-auto"
+                                        className="border border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black  font-semibold py-2 px-4 rounded-md text-center transition w-full mt-auto"
                                     >
                                         Bekijk {
                                             cert.title.toLowerCase().includes('tutorial')
@@ -57,7 +63,8 @@ export default function Courses() {
                                                 : cert.title.toLowerCase().includes('screenshot') || cert.note?.toLowerCase().includes('screenshot')
                                                     ? 'screenshot'
                                                     : 'certificaat'
-                                        }                  </a>
+                                        }
+                                    </a>
                                 )}
                             </div>
                         ))}

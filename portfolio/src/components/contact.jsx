@@ -24,7 +24,7 @@ function Contact() {
   };
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-br  flex flex-col items-center relative">
+    <section className="pb-10 pt-20 px-6 sm:px-12 flex flex-col items-center relative bg-gradient-to-br ">
       {showSuccess && (
         <div className="fixed top-20 z-50 left-1/2 -translate-x-1/2 px-6 py-3 bg-green-600 text-white rounded-2xl shadow-lg flex items-center gap-2 animate-fade-in">
           <svg
@@ -39,14 +39,15 @@ function Contact() {
         </div>
       )}
 
-      <div className="max-w-md w-full bg-gray-700/70 backdrop-blur-md rounded-2xl shadow-2xl p-8 flex flex-col gap-6 border border-yellow-500/40">
-        <h2 className="text-3xl font-extrabold text-yellow-400 text-center tracking-wide drop-shadow-lg">
+      <div className="relative max-w-md w-full border border-white/30 shadow-2xl rounded-2xl bg-white/10 backdrop-blur-md p-8 flex flex-col gap-6 overflow-hidden">
+        <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
+        <h2 className="text-3xl font-bold text-violet-400 text-center tracking-wide drop-shadow-lg mb-2">
           Contacteer mij
         </h2>
 
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4 z-10">
           <div>
-            <label htmlFor="email" className="block text-yellow-300 font-semibold mb-1">
+            <label htmlFor="email" className="block text-gray-100 font-semibold mb-1">
               Emailadres
             </label>
             <input
@@ -56,7 +57,7 @@ function Contact() {
               required
               value={formValues.email}
               onChange={handleChange}
-              className="w-full p-3 rounded-lg bg-gray-900 text-white border border-gray-700 focus:border-yellow-400 focus:ring-2 focus:ring-yellow-300 placeholder-gray-500 transition"
+              className="w-full p-3 rounded-lg bg-gray-900/80 text-gray-200 border border-white/20 focus:border-violet-400 focus:ring-2 focus:ring-violet-300 placeholder-gray-400 transition"
               placeholder="jouw@email.com"
               autoComplete="email"
               disabled={state.submitting}
@@ -69,7 +70,7 @@ function Contact() {
             />
           </div>
           <div>
-            <label htmlFor="message" className="block text-yellow-300 font-semibold mb-1">
+            <label htmlFor="message" className="block text-gray-200 font-semibold mb-1">
               Bericht
             </label>
             <textarea
@@ -79,7 +80,7 @@ function Contact() {
               rows="5"
               value={formValues.message}
               onChange={handleChange}
-              className="w-full p-3 rounded-lg bg-gray-900 text-white border border-gray-700 focus:border-yellow-400 focus:ring-2 focus:ring-yellow-300 placeholder-gray-500 transition"
+              className="w-full p-3 rounded-lg bg-gray-900/80 text-gray-100 border border-white/20 focus:border-violet-400 focus:ring-2 focus:ring-violet-300 placeholder-gray-400 transition"
               placeholder="Typ je bericht hier..."
               disabled={state.submitting}
             />
@@ -93,7 +94,7 @@ function Contact() {
           <button 
             type="submit" 
             disabled={state.submitting}
-            className="bg-yellow-500 hover:bg-yellow-400/90 text-black font-bold py-3 px-6 rounded-lg shadow-lg transition mt-2 tracking-wide text-lg hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-yellow-300"
+            className="border border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black font-bold py-3 px-6 rounded-lg shadow-lg transition mt-2 tracking-wide text-lg hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-yellow-300"
           >
             {state.submitting ? "Versturen..." : "Verstuur"}
           </button>
