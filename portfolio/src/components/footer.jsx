@@ -14,7 +14,7 @@ export default function Footer() {
             href="https://www.linkedin.com/in/jef-ceulemans-509aa6295/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-yellow-400 transition-colors"
+            className="hover:text-violet-400 transition-colors"
           >
             <FontAwesomeIcon icon={faLinkedin} size="lg" />
 
@@ -24,7 +24,7 @@ export default function Footer() {
             href="https://github.com/jef-ceulemans"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-yellow-400 transition-colors"
+            className="hover:text-violet-400 transition-colors"
           >
             <FontAwesomeIcon icon={faGithub} size="lg" />
 
@@ -34,7 +34,7 @@ export default function Footer() {
             href="mailto:jef.ceulemans@proximus.be"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-yellow-400 transition-colors"
+            className="hover:text-violet-400 transition-colors"
           >
             <FontAwesomeIcon icon={faEnvelope} size='lg' />
 
