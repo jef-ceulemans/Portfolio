@@ -13,24 +13,24 @@ const projects = [
             `Voor het vak Project 4.0 werkte ik in groep aan een opdracht voor de klant Axxes. 
       Zij wilden graag een carpoolapplicatie voor hun evenementen.
       Deze cursus begon al aan het begin van het jaar. In de eerste fase lag de focus op de analyse, het opstellen van 
-      een projectplan, en het maken van mock-ups. Het programmeren van de applicatie gebeurde in een periode van drie 
+      een projectplan en het maken van mock-ups. Het programmeren van de applicatie gebeurde in een periode van drie 
       weken tijdens de projectweek in de examenperiode.`,
             `Het einddoel was een applicatie waarmee evenementen konden worden aangemaakt. 
-      Als gebruiker kon je je inschrijven voor een evenement en aangeven of je chauffeur wilde zijn of niet. 
+      Als gebruiker kon men zich inschrijven voor een evenement en aangeven of men chauffeur wilde zijn of niet. 
       Wanneer de deadline voor inschrijving naderde, kwam de AI in actie. Die analyseerde waar iedereen woonde en 
       wie er bereid was om te rijden. Op basis daarvan werden optimale routes opgesteld.`,
-            `Als je chauffeur was, kreeg je een Google Maps-link met de route die je moest volgen om iedereen op te halen.
+            `Als chauffeur ontving men een Google Maps-link met de route die gevolgd diende te worden om iedereen op te halen.
       Het doel van de applicatie was om een betere teamsfeer te creëren door samen te rijden met collega’s. 
-      Het milieuaspect was mooi meegenomen: dankzij deze applicatie wordt niet alleen de teamgeest versterkt, 
-      maar leveren de gebruikers ook een bijdrage aan een duurzamere mobiliteit.`
+      Het milieuaspect was mooi meegenomen: dankzij deze applicatie werd niet alleen de teamgeest versterkt, 
+      maar leverden de gebruikers ook een bijdrage aan een duurzamere mobiliteit.`
         ],
-        demoDesc: `In de bijgevoegde live demo van de applicatie zie je hoe een evenement is aangemaakt en 
+        demoDesc: `In de bijgevoegde live demo van de applicatie is te zien hoe een evenement is aangemaakt en 
     hoe verschillende gebruikers zich hiervoor hebben ingeschreven. 
     Na de deadline heeft de AI meerdere carpools samengesteld met passagiers die, volgens de berekeningen, 
     het meest optimaal bij elkaar passen voor de rit.`,
-        contribution: `Mijn grootste verwezenlijking in dit project was de integratie van de Google Maps API. Ik heb deze in de backend geïntegreerd, omdat het veiliger is om een API-key daar te bewaren in plaats van in de front-end. Ik gebruikte deze Google API voor verschillende doeleinden. Ik heb de API gebruikt om de lengte- en breedtegraad (longitude en latitude) van een adres te berekenen en deze ook weer om te zetten naar een leesbaar adres. Zoals je in de onderstaande live demo kunt zien, voer ik een adres in. In de backend worden vervolgens de lengte- en breedtegraad van dit adres opgeslagen. 
+        contribution: `Mijn grootste verwezenlijking in dit project was de integratie van de Google Maps API. Ik heb deze in de backend geïntegreerd, omdat het veiliger is om een API-key daar te bewaren in plaats van in de front-end. Ik gebruikte deze Google API voor verschillende doeleinden. Ik heb de API gebruikt om de lengte- en breedtegraad (longitude en latitude) van een adres te berekenen en deze ook weer om te zetten naar een leesbaar adres. Zoals in de live demo te zien is, voer ik een adres in. In de backend worden vervolgens de lengte- en breedtegraad van dit adres opgeslagen. 
     
-                        In de front-end wordt deze lengte- en breedtegraad weer omgezet naar een echt adres. Dit is zo gedaan omdat de AI lengte- en breedtegraden nodig heeft. Bovendien is het een goede gewoonte om geen aparte velden in de database aan te maken voor berekeningen die je kunt uitvoeren, op deze manier houden we alleen de lengte- en breedtegraad bij. Verder heb ik het welkomstscherm, het dashboard en de evenementenpagina gemaakt. Op die pagina kon je u aanmelden voor een evenement en kiezen of je wel of geen chauffeur wilde zijn. Dit waren mijn grootste bijdragen, maar ik heb hier en daar ook bugs opgelost en fouten hersteld.`
+                        In de front-end wordt deze lengte- en breedtegraad weer omgezet naar een echt adres. Dit is zo gedaan omdat de AI lengte- en breedtegraden nodig heeft. Bovendien is het een goede gewoonte om geen aparte velden in de database aan te maken voor berekeningen die uitgevoerd kunnen worden, op deze manier houden we alleen de lengte- en breedtegraad bij. Verder heb ik het welkomstscherm, het dashboard en de evenementenpagina gemaakt. Op die pagina kon men zich aanmelden voor een evenement en kiezen of men wel of geen chauffeur wilde zijn. Dit waren mijn grootste bijdragen, maar ik heb hier en daar ook bugs opgelost en fouten hersteld.`
     },
     {
         id: 2,
@@ -43,9 +43,9 @@ const projects = [
             compleet met artiesten, podia, tickets en meer. De festivalganger zou dan naar deze website surfen 
             om de line-up te bekijken en tickets te kopen als er interesse is. `
         ],
-        contribution: `Mijn grootste verwezenlijking in dit project was het maken van de tijdschema's. Daarin kon je de planning van de stages per dag zien. Per stage zag je dan een tijdstabel van welke artiesten daar die dag zouden optreden. Ook heb ik authenticatie toegevoegd via Auth0. In de backend heb ik de API-routes beschermd zodat deze niet bereikt konden worden, buiten door de applicatie zelf. Verder heb ik ook adminrechten voorzien voor bepaalde delen van de applicatie.
+        contribution: `Mijn grootste verwezenlijking in dit project was het maken van de tijdschema's. Daarin kon je de planning van de podia per dag zien. Per podium zag je dan een tijdstabel van welke artiesten daar die dag zouden optreden. Ook heb ik authenticatie toegevoegd via Auth0. In de backend heb ik de API-routes beschermd zodat deze niet bereikt konden worden, behalve door de applicatie zelf. Verder heb ik ook adminrechten voorzien voor bepaalde delen van de applicatie.
 
-                        Ook heb ik de line-up pagina gemaakt. Op deze pagina stonden alle artiesten die naar het festival zouden komen. Hier heb ik gebruikgemaakt van een Spotify API, die al in de backend geïntegreerd was door mijn medestudent. Je kon ook op een artiest drukken om meer info over die artiest te vinden. Ik heb hier ook een iframe gebruikt om via Spotify het meest bekende liedje van deze artiest te laten zien en af te spelen. Verder heb ik de algemene layout van de applicatie gemaakt. Ik had een paar kleuren gedefinieerd in Tailwind zodat in de applicatie overal dezelfde kleuren gebruikt zouden worden.`,
+                        Ook heb ik de line-up pagina gemaakt. Op deze pagina stonden alle artiesten die naar het festival zouden komen. Hier heb ik gebruikgemaakt van een Spotify API, die al in de backend geïntegreerd was door mijn medestudent. Je kon ook op een artiest drukken om meer info over die artiest te vinden. Ik heb hier ook een iframe gebruikt om via Spotify het meest bekende liedje van deze artiest te laten zien en af te spelen. Verder heb ik de algemene lay-out van de applicatie gemaakt. Ik had een paar kleuren gedefinieerd in Tailwind zodat in de applicatie overal dezelfde kleuren gebruikt zouden worden.`,
         screenshots: [
             {
                 src: "/assets/images/projects/festival/artistinfo.png",
@@ -76,12 +76,12 @@ const projects = [
         description: [
             `Voor het vak Augmented Reality and Mobile App Development kregen we een projectopdracht. We mochten zelf kiezen wat we maakten, zolang het maar AR (Augmented Reality) bevatte via Unity en Vuforia. Ook moest er een API zijn voor communicatie, die dan gebruik moest maken van een JSON server. Dit alles moest uiteindelijk geïntegreerd worden in een Flutter applicatie.
 
-            Dit was ook een teamopdracht, en wij hebben ervoor gekozen om een autoscanner te maken. De app herkent een auto, bijvoorbeeld een Lamborghini Urus, en zal hierover specificaties geven, met nog extra functionaliteiten die je in het bijbehorende filmpje kunt ontdekken.`
+            Dit was ook een teamopdracht, en wij hadden ervoor gekozen om een autoscanner te maken. De app herkende een auto, bijvoorbeeld een Lamborghini Urus, en zou hierover specificaties geven, met nog extra functionaliteiten die in het bijbehorende filmpje ontdekt kunnen worden.`
         ],
-        demoDesc: `In de bijgevoegde live demo van de applicatie zie je hoe een auto wordt gescand en welke opties er dan beschikbaar zijn.`,
-        contribution: `In dit project heb ik het volledige Unity-deel en Vuforia voor mijn rekening genomen. Dit omvatte het trainen van de foto's van de auto's in Vuforia, die vervolgens in Unity moesten worden geïmporteerd. Het idee was dat zodra een auto herkend werd, er een 3D-model van die specifieke auto op het scherm zou verschijnen, samen met de bijbehorende informatie én een geluidje om het wat levendiger te maken. Ik heb het ook zo opgezet dat je in Flutter de kleur van de auto kunt aanpassen, bijvoorbeeld naar groen. Als je dan die specifieke auto scant, zal het 3D-model de kleur hebben die jij hebt ingesteld. Verder heb ik me beziggehouden met de layout en het design van Flutter.  
+        demoDesc: `In de bijgevoegde live demo van de applicatie is te zien je hoe een auto wordt gescand en welke opties er dan beschikbaar zijn.`,
+        contribution: `In dit project nam ik het volledige Unity-deel en Vuforia voor mijn rekening. Dit omvatte het trainen van de foto's van de auto's in Vuforia, die vervolgens in Unity moesten worden geïmporteerd. Het idee was dat zodra een auto herkend werd, er een 3D-model van die specifieke auto op het scherm zou verschijnen, samen met de bijbehorende informatie en een geluidje om het wat levendiger te maken. Ik had het ook zo opgezet dat gebruikers in de applicatie de kleur van de auto konden aanpassen, bijvoorbeeld naar groen. Als die specifieke auto dan gescand werd, zou het 3D-model de kleur hebben die men had ingesteld. Verder hield ik me bezig met de lay-out en het design van de applicatie.  
         
-        Voor de toekomst zou de bestaande API vervangen kunnen worden door een echte back-end in plaats van een JSON server. Ook zouden bepaalde designopties verbeterd kunnen worden.`
+        Voor de toekomst zou de bestaande API vervangen kunnen worden door een echte backend in plaats van een JSON-server. Ook zouden bepaalde designopties verbeterd kunnen worden.`
     },
 
     {
@@ -98,13 +98,13 @@ const projects = [
 
         ],
         videoDemo: "https://www.youtube.com/embed/tcoWecZ4waA?si=sh3BDCwM-jkqEpm8",
-        description: [`Voor de cursus Project PHP moesten we in teamverband een applicatie maken voor onze klant, Wielerclub WTC Roland. Deze club organiseert elk jaar een wielerwedstrijd in Geel. De applicatie moest zowel de inschrijvingen ondersteunen als de nodige tools bieden voor tijdens de wedstrijddag zelf. Als eerste stap moest een team zich inschrijven. Dit team zou dan een e-mail ontvangen met het verzoek om het inschrijfgeld te betalen. Hierna controleert de penningmeester of de betaling inderdaad is voldaan.
+        description: [`Voor de cursus Project PHP moesten we in teamverband een applicatie ontwikkelen voor onze klant, wielerclub WTC Roland. Deze club organiseert jaarlijks een wielerwedstrijd in Geel. De applicatie moest zowel de inschrijvingen ondersteunen als de nodige tools bieden voor de wedstrijddag zelf. Als eerste stap moest een team zich inschrijven. Vervolgens ontving het team een e-mail met het verzoek om het inschrijfgeld te betalen. Daarna controleerde de penningmeester of de betaling daadwerkelijk was voldaan.
 
-                        Op de wedstrijddag zelf moeten de teams zich aanmelden bij een aangewezen persoon. Deze persoon zal in de applicatie bevestigen dat ze aanwezig zijn en een rugnummer toewijzen. Vervolgens wordt er een motor toegewezen aan een team. Wanneer de wedstrijd begint, is er in de applicatie een chronometer die bijhoudt hoe lang elke ronde duurt. De applicatie omvat dus alle functionaliteiten die nodig zijn voor het organiseren van een wielerwedstrijd, inclusief essentiële tools voor tijdens de wedstrijd, zoals de chronometer.`],
+                        Op de wedstrijddag moesten de teams zich aanmelden bij een aangewezen persoon. Deze bevestigde in de applicatie hun aanwezigheid en kende een rugnummer toe. Vervolgens werd ook een motor aan elk team toegewezen. Zodra de wedstrijd van start ging, registreerde iemand in de applicatie de rondetijden met een ingebouwde chronometer. De applicatie omvatte dus alle functionaliteiten die nodig zijn voor het organiseren van een wielerwedstrijd, inclusief essentiële tools voor tijdens de wedstrijd, zoals de chronometer.`],
         demoDesc: `In onderstaande live demo wordt kort de chronometer getoond.`,
-        contribution: `Voor dit project heb ik de chronometer gemaakt, wat best veel tijd kostte vanwege diverse bugs. De huidige tijd na het afklokken moest namelijk in de database bewaard worden en dynamisch aangepast worden aan het aantal rondes dat een specifiek team moest rijden. Hier heb ik de meeste tijd in gestoken, maar uiteindelijk is het allemaal gelukt.
+        contribution: `Voor dit project ontwikkelde ik de chronometer. Dit proces kostte best veel tijd door diverse bugs, met name de uitdaging om de actuele tijd na het afklokken correct in de database op te slaan en dynamisch aan te passen aan het aantal rondes dat een specifiek team moest rijden. Hier heb ik de meeste tijd in gestoken, maar uiteindelijk is het allemaal gelukt.
 
-Verder heb ik de ploegen aanmelden pagina ontwikkeld, waar je teams kon aanmelden op de dag van de wedstrijd. Ook heb ik meegewerkt aan het algemene design van de applicatie en diverse bugs opgelost.`
+Verder creëerde ik de aanmeldpagina voor de ploegen, waar teams op de wedstrijddag konden worden geregistreerd. Ook leverde ik een bijdrage aan het algemene design van de applicatie en loste ik diverse bugs op.`
     },
     {
         id: 5,
@@ -113,7 +113,7 @@ Verder heb ik de ploegen aanmelden pagina ontwikkeld, waar je teams kon aanmelde
         image: "/assets/images/projects/recipefinder/recipefinder.png",
         tech: ["MAUI", ".NET 8.0", "MySQL"],
         description: [
-            `Dit project is een receptzoeker die groenten of fruit herkent en hiervoor recepten toont waar dit ingrediënt in voorkomt. Ook is er een mogelijkheid om een boodschappenlijst te maken. Hiervoor heb ik gebruikgemaakt van MAUI met een API die je boodschappen bijhoudt. Hierbij wordt ook de API van Spoonacular aangeroepen om recepten te krijgen voor het herkende ingrediënt. Voor het herkennen van een ingrediënt heb ik een Azure AI-model getraind. Dit project maakt bovendien gebruik van best practices zoals het Repository Design Pattern en een navigation service
+            `Dit project is een receptzoeker die groenten of fruit herkent en hiervoor recepten toont waarin het herkende ingrediënt wordt gebruikt. Daarnaast is er ook een mogelijkheid om een boodschappenlijst te maken. Hiervoor maakte ik gebruik van .NET MAUI, in combinatie met een API die de boodschappen bijhoudt. Ook wordt de Spoonacular API aangeroepen om recepten op te halen op basis van het herkende ingrediënt. Voor het herkennen van ingrediënten heb ik een Azure AI-model getraind. Het project is opgebouwd volgens best practices, waaronder het Repository Design Pattern en het gebruik van een navigation service.
         
         Het project zelf is niet het mooiste, maar het heeft zeker potentie. Er zou bijvoorbeeld een optie kunnen komen om meerdere ingrediënten te herkennen, waarna er specifiek recepten worden getoond die alleen deze ingrediënten bevatten. Ook het ontwerp kan nog mooier, dit project was puur bedoeld om de functionaliteit te demonstreren.        `
 
@@ -125,9 +125,9 @@ Verder heb ik de ploegen aanmelden pagina ontwikkeld, waar je teams kon aanmelde
         image: "/assets/images/projects/ontwikkeling/ontwikkeling.jpg",
         tech: ["React Native", "Python Django", "PostgreSQL", "NativeWind"],
         description: [
-            `Dit project is momenteel in ontwikkeling. Ik ben bezig met het ontwikkelen van een app voor het delen van reisfoto's. Het idee is dat je je vrienden kunt volgen binnen de app. Per stad kun je foto's uploaden die je de moeite waard vindt om te delen. Zo zie je duidelijk welke vrienden op welke plekken zijn geweest en welke foto's ze daar hebben gemaakt. Dit kan je inspireren om zelf ook die bestemmingen te bezoeken. Daarnaast kun je bij elke locatie een stukje tekst toevoegen, zo wordt het ook een soort persoonlijk reisdagboek. 
+            `Dit project is momenteel in ontwikkeling. Ik werk aan een app voor het delen van reisfoto’s, waarbij gebruikers hun vrienden kunnen volgen. Per stad kunnen foto’s worden geüpload die de moeite waard zijn om te delen. Zo zie je in één oogopslag welke vrienden welke steden hebben bezocht en welke foto’s ze daar hebben gemaakt. Dit kan anderen inspireren om zelf ook die bestemmingen te verkennen. Bij elke locatie kan ook een korte tekst toegevoegd worden, waardoor het een soort persoonlijk reisdagboek wordt. 
             
-            Ik maak deze app om mijn skills in React Native te verbeteren, maar ook om eens uitgebreid met Django te werken. Ik heb namelijk nog maar weinig ervaring met Django.`
+            Met dit project wil ik mijn vaardigheden in React Native verder ontwikkelen, en tegelijk meer ervaring opdoen met Django, waarmee ik tot nu toe nog maar beperkt heb gewerkt.`
         ],
     },
 ];
@@ -151,7 +151,7 @@ function ProjectModal({ project, onClose }) {
         return (
             <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm">
                 <div className="relative z-50 w-full max-w-7xl mx-auto">
-                    <div className="m-4  mb-10     mt-24 relative bg-black/80 border border-white/30 rounded-2xl p-8 sm:p-10 shadow-2xl max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden">
+                    <div className="m-2 sm:m-4 mb-10 mt-32 sm:mt-24 relative bg-black/80 border border-white/30 rounded-2xl p-4 sm:p-10 shadow-2xl max-h-[96vh] sm:max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden">
                         <button
                             onClick={onClose}
                             className="sticky top-0 right-0 ml-auto  z-50 block text-4xl text-yellow-500 hover:text-yellow-400  rounded-full w-12 h-12 flex items-center justify-center p-2"
@@ -231,7 +231,7 @@ function ProjectModal({ project, onClose }) {
         return (
             <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm">
                 <div className="relative z-50 w-full max-w-7xl mx-auto">
-                    <div className="m-4  mb-10     mt-24 relative bg-black/80 border border-white/30 rounded-2xl p-8 sm:p-10 shadow-2xl max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden">
+                    <div className="m-2 sm:m-4 mb-10 mt-32 sm:mt-24 relative bg-black/80 border border-white/30 rounded-2xl p-8 sm:p-10 shadow-2xl max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden">
                         <button
                             onClick={onClose}
                             className="sticky top-0 right-0 ml-auto  z-50 block text-4xl text-yellow-500 hover:text-yellow-400  rounded-full w-12 h-12 flex items-center justify-center p-2"
@@ -300,7 +300,7 @@ function ProjectModal({ project, onClose }) {
         return (
             <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm">
                 <div className="relative z-50 w-full max-w-7xl mx-auto">
-                    <div className="m-4  mb-10     mt-24 relative bg-black/80 border border-white/30 rounded-2xl p-8 sm:p-10 shadow-2xl max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden">
+                    <div className="m-2 sm:m-4 mb-10 mt-32 sm:mt-24 relative bg-black/80 border border-white/30 rounded-2xl p-8 sm:p-10 shadow-2xl max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden">
                         <button
                             onClick={onClose}
                             className="sticky top-0 right-0 ml-auto  z-50 block text-4xl text-yellow-500 hover:text-yellow-400  rounded-full w-12 h-12 flex items-center justify-center p-2"
@@ -408,7 +408,7 @@ function ProjectModal({ project, onClose }) {
         return (
             <div className="fixed inset-0 z-50 flex items-center justify-center  backdrop-blur-sm">
                 <div className="relative z-50 w-full max-w-7xl mx-auto">
-                    <div className="m-4  relative bg-black/80 border border-white/30 rounded-2xl p-8 sm:p-10 shadow-2xl max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden">
+                    <div className="mt-32  sm:mt-16 m-4 relative bg-black/80 border border-white/30 rounded-2xl p-8 sm:p-10 shadow-2xl max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden">
                         <button
                             onClick={onClose}
                             className="sticky top-0 right-0 ml-auto z-50 block text-4xl text-yellow-500 hover:text-yellow-400 rounded-full w-12 h-12 flex items-center justify-center p-2"
@@ -416,7 +416,7 @@ function ProjectModal({ project, onClose }) {
                         >
                             &times;
                         </button>
-                        <h3 className="text-violet-400 text-3xl font-bold mb-6 text-center">{project.title}</h3>
+                        <h3 className="text-violet-400 text-3xl font-bold mb-10 text-center">{project.title}</h3>
 
                         <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-8">
                             <div className="lg:col-span-4 relative border border-white/30 shadow-lg rounded-2xl p-6 backdrop-blur-md overflow-hidden hover:border-violet-400 transition-colors duration-200 flex flex-col justify-center">
@@ -468,7 +468,7 @@ function ProjectModal({ project, onClose }) {
         return (
             <div className="fixed inset-0 z-50 flex items-center justify-center  backdrop-blur-sm">
                 <div className="relative z-50 w-full max-w-7xl mx-auto">
-                    <div className="m-4 relative bg-black/80 border border-white/30 rounded-2xl p-8 sm:p-10 shadow-2xl max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden">
+                    <div className="mt-32 sm:mt-0 m-4 relative bg-black/80 border border-white/30 rounded-2xl p-8 sm:p-10 shadow-2xl max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden">
                         <button
                             onClick={onClose}
                             className="sticky top-0 right-0 ml-auto z-50 block text-4xl text-yellow-500 hover:text-yellow-400  rounded-full w-12 h-12 flex items-center justify-center p-2"
@@ -501,7 +501,7 @@ function ProjectModal({ project, onClose }) {
         <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm">
             <div className="relative z-50 w-full max-w-7xl mx-auto">
                 <div
-                    className="m-4 mb-10     mt-24 relative bg-black/70 border border-white/30 rounded-2xl p-8 sm:p-10 shadow-2xl max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden"
+                    className="m-2 sm:m-4 mb-10 mt-32 sm:mt-24 relative bg-black/70 border border-white/30 rounded-2xl p-8 sm:p-10 shadow-2xl max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden"
                 >
                     <button
                         onClick={onClose}

@@ -103,7 +103,7 @@ function AnimatedParticles({ colors = ["violet", "yellow"], className = "" }) {
                 return (
                     <div key={color}>
                         <div 
-                            className={`absolute w-72 h-72 ${particleColors.primary} rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse`}
+                            className={`absolute w-72 h-72 ${particleColors.primary} rounded-full mix-blend-multiply filter blur-xl opacity-35 animate-pulse`}
                             style={{
                                 top: `${10 + colorIndex * 30}%`,
                                 left: `${-5 + colorIndex * 20}%`,
@@ -113,7 +113,7 @@ function AnimatedParticles({ colors = ["violet", "yellow"], className = "" }) {
                         />
                         
                         <div 
-                            className={`absolute w-64 h-64 ${particleColors.secondary} rounded-full mix-blend-multiply filter blur-xl opacity-35 animate-pulse`}
+                            className={`absolute w-64 h-64 ${particleColors.secondary} rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-pulse`}
                             style={{
                                 top: `${20 + colorIndex * 25}%`,
                                 right: `${-5 + colorIndex * 15}%`,
@@ -123,7 +123,7 @@ function AnimatedParticles({ colors = ["violet", "yellow"], className = "" }) {
                         />
                         
                         <div 
-                            className={`absolute w-56 h-56 ${particleColors.tertiary} rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse`}
+                            className={`absolute w-56 h-56 ${particleColors.tertiary} rounded-full mix-blend-multiply filter blur-xl opacity-35 animate-pulse`}
                             style={{
                                 bottom: `${5 + colorIndex * 20}%`,
                                 left: `${30 + colorIndex * 25}%`,

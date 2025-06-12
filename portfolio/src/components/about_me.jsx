@@ -53,7 +53,7 @@ export default function AboutMe() {
                                 </div>
                                 <p className="text-gray-200">
                                     Hallo! Mijn naam is Jef Ceulemans, een 21-jarige student in mijn laatste jaar Toegepaste Informatica,
-                                    met als specialisatie Applicatieontwikkeling. Mijn interesse in IT begon al op jonge leeftijd, met een sterke focus
+                                    met als specialisatie applicatieontwikkeling. Mijn interesse in IT begon al op jonge leeftijd, met een sterke focus
                                     op programmeren. Daarom koos ik bewust voor een IT-gerelateerde studierichting in mijn vijfde en zesde jaar
                                     van het middelbaar: IT en Netwerken.
                                 </p>
@@ -84,7 +84,7 @@ export default function AboutMe() {
                                     Ik speel badminton en heb in het verleden deelgenomen aan toernooien. Ik gaf ook les
                                     aan de jongste leden van mijn club als vrijwilliger. Badminton leert je zowel zelfstandig als in teamverband te werken,
                                     een goede weerspiegeling van hoe ik werk. Zowel solo- als samenwerkingsomgevingen passen bij mij.
-                                    Ik kook ook graag, ik begon toen ik ongeveer tien jaar oud was; zelfs toen bracht ik een hele
+                                    Ik kook ook graag, ik begon toen ik ongeveer tien jaar oud was, zelfs toen bracht ik een hele
                                     dag in de keuken door om een driegangenmaaltijd te bereiden. Gelukkig gaat het nu wat sneller. In mijn vrije tijd
                                     probeer ik mezelf te verbeteren op verschillende gebieden binnen softwareontwikkeling. Ik volg cursussen en bouw mijn eigen
                                     applicaties om er beter in te worden. Ik volg momenteel bijvoorbeeld ook een cursus over hacking.

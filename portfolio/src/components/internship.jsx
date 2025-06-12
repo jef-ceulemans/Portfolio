@@ -47,12 +47,12 @@ export default function Internship() {
                         </h3>
                         <p className="text-gray-200 ">
                             Tijdens mijn stage aan het LaBRI-onderzoeksinstituut (Laboratoire Bordelais de Recherche en Informatique) in Bordeaux ontwikkelde ik samen met medestudent
-                            Stijn De Busser een interactieve webapplicatie voor de visualisatie van microbiome-data. Deze tool maakte
+                            Stijn De Busser een interactieve webapplicatie voor de visualisatie van microbiële data. Deze tool maakte
                             het mogelijk om complexe taxonomische CSV-bestanden, afkomstig uit metagenomisch DNA-onderzoek, om te zetten naar
                             duidelijke, interactieve grafieken. <br /><br />
                             Gebruikers konden hiërarchische taxonomische structuren verkennen via een Icicle Plot en patiëntdata analyseren
-                            met behulp van een Parallel Coordinates Plot, Boxplot en spreadsheetweergave, configureerbaar via een side-panel. De applicatie ondersteunt het vergelijken
-                            van distributies van specifieke taxon tussen verschillende patiëntengroepen en biedt uitgebreide filter en
+                            met behulp van een Parallel Coordinates Plot, Boxplot en spreadsheetweergave, configureerbaar via een side-panel. De applicatie ondersteunde het vergelijken
+                            van distributies van een specifieke taxon tussen verschillende patiëntengroepen en bood uitgebreide filter- en
                             selectieopties voor een diepgaande analyse.
                         </p>
                     </div>
@@ -96,7 +96,7 @@ export default function Internship() {
                             Stage Documenten
                         </h3>
                         <p className="text-gray-200 text-center max-w-2xl mb-4 text-base ">
-                            Hier vind je alle belangrijke documenten over mijn stage: het projectplan, het realisatiedocument en mijn reflectie. Klik op een van de knoppen hieronder om het gewenste bestand te openen.
+                            Hier zijn alle belangrijke documenten over mijn stage te vinden: het projectplan, het realisatiedocument en mijn reflectie. Klik op een van de knoppen hieronder om het gewenste bestand te openen.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 w-full justify-center items-center">
                             <a
