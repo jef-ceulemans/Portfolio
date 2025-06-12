@@ -6,29 +6,77 @@ import Internship from './components/internship'
 import Projects from './components/projects'
 import Footer from './components/footer'
 import Home from './components/home'
+import React, { useRef, useEffect } from "react";
 
-function SectionTransition({ color = "violet" }) {
+ function SectionTransition({ color = "violet" }) {
     const colorMap = {
-        violet: "#7c3aed", 
-        yellow: "#f59e42", 
-    }
+        violet: "#7c3aed",
+        yellow: "#eab308",
+    };
+
+    const morphRef = useRef(null);
+
+    useEffect(() => {
+        let frame = 0;
+        let running = true;
+
+        const base = [40, 140, 0, 80];
+        const amp = 15; 
+        const speed = 0.015; 
+
+        function animate() {
+            if (!running) return;
+
+            const y1 = 40 + Math.sin(frame * speed) * amp;
+            const y2 = 140 + Math.cos(frame * speed * 0.7) * amp;
+            const y3 = 0 + Math.sin(frame * speed * 1.3) * (amp * 0.6);
+            const y4 = 80 + Math.cos(frame * speed * 0.9) * (amp * 0.7);
+
+            const d = `M0,${y1.toFixed(2)} C480,${y2.toFixed(2)} 960,${y3.toFixed(2)} 1440,${y4.toFixed(2)} L1440,80 L0,80 Z`;
+            if (morphRef.current) {
+                morphRef.current.setAttribute("d", d);
+            }
+            frame++;
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+        return () => { running = false; };
+    }, []);
+
     return (
-        <div className="w-full bg-black/70 overflow-hidden leading-none" aria-hidden="true">
+        <div className="w-full bg-black/70 overflow-hidden leading-none relative" aria-hidden="true">
             <svg
                 viewBox="0 0 1440 80"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-full h-12"
+                className="w-full h-15"
                 preserveAspectRatio="none"
             >
+                <defs>
+                    <linearGradient id="gradient" x1="0" y1="0" x2="1440" y2="80" gradientUnits="userSpaceOnUse">
+                        <stop stopColor={colorMap[color]} stopOpacity="0.25" />
+                        <stop offset="1" stopColor={colorMap[color]} stopOpacity="0.05" />
+                    </linearGradient>
+                </defs>
                 <path
+                    ref={morphRef}
                     d="M0,40 C480,140 960,0 1440,80 L1440,80 L0,80 Z"
+                    fill="url(#gradient)"
+                />
+                <path
+                    d="M0,30 C600,120 960,10 1440,70 L1440,80 L0,80 Z"
                     fill={colorMap[color]}
                     opacity="0.10"
                 />
+                <path
+                    d="M0,50 C600,70 1000,50 1440,60 L1440,80 L0,80 Z"
+                    fill={colorMap[color]}
+                    opacity="0.07"
+                />
             </svg>
         </div>
-    )
+    );
 }
 
 function AnimatedParticles({ colors = ["violet", "yellow"], className = "" }) {
@@ -55,7 +103,7 @@ function AnimatedParticles({ colors = ["violet", "yellow"], className = "" }) {
                 return (
                     <div key={color}>
                         <div 
-                            className={`absolute w-72 h-72 ${particleColors.primary} rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse`}
+                            className={`absolute w-72 h-72 ${particleColors.primary} rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse`}
                             style={{
                                 top: `${10 + colorIndex * 30}%`,
                                 left: `${-5 + colorIndex * 20}%`,
@@ -65,7 +113,7 @@ function AnimatedParticles({ colors = ["violet", "yellow"], className = "" }) {
                         />
                         
                         <div 
-                            className={`absolute w-64 h-64 ${particleColors.secondary} rounded-full mix-blend-multiply filter blur-xl opacity-25 animate-pulse`}
+                            className={`absolute w-64 h-64 ${particleColors.secondary} rounded-full mix-blend-multiply filter blur-xl opacity-35 animate-pulse`}
                             style={{
                                 top: `${20 + colorIndex * 25}%`,
                                 right: `${-5 + colorIndex * 15}%`,
@@ -75,7 +123,7 @@ function AnimatedParticles({ colors = ["violet", "yellow"], className = "" }) {
                         />
                         
                         <div 
-                            className={`absolute w-56 h-56 ${particleColors.tertiary} rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse`}
+                            className={`absolute w-56 h-56 ${particleColors.tertiary} rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse`}
                             style={{
                                 bottom: `${5 + colorIndex * 20}%`,
                                 left: `${30 + colorIndex * 25}%`,
@@ -87,10 +135,7 @@ function AnimatedParticles({ colors = ["violet", "yellow"], className = "" }) {
                 );
             })}
             
-            <div className="absolute top-1/4 left-1/4 w-4 h-4 bg-violet-400 rounded-full opacity-60 animate-bounce" style={{ animationDelay: '2s', animationDuration: '3s' }} />
-            <div className="absolute top-1/3 right-1/4 w-3 h-3 bg-yellow-400 rounded-full opacity-70 animate-bounce" style={{ animationDelay: '1s', animationDuration: '2.5s' }} />
-            <div className="absolute bottom-1/3 left-1/3 w-5 h-5 bg-violet-300 rounded-full opacity-50 animate-bounce" style={{ animationDelay: '3s', animationDuration: '3.5s' }} />
-            <div className="absolute top-2/3 right-1/3 w-3 h-3 bg-yellow-300 rounded-full opacity-60 animate-bounce" style={{ animationDelay: '0.5s', animationDuration: '2s' }} />
+
         </div>
     );
 }
@@ -181,7 +226,6 @@ function App() {
                     animation: drift 8s ease-in-out infinite;
                 }
                 
-                /* Enhanced pulse animation */
                 @keyframes enhanced-pulse {
                     0%, 100% { 
                         opacity: 0.2; 

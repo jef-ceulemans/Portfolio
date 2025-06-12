@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 
 function Contact() {
@@ -9,6 +9,24 @@ function Contact() {
     email: '',
     message: ''
   });
+
+  const cardRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (cardRef.current) {
+        const rect = cardRef.current.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 80) {
+          cardRef.current.classList.add('animate-fade-in-up');
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     if (state.succeeded) {
@@ -24,7 +42,7 @@ function Contact() {
   };
 
   return (
-    <section className=" bg-black/70 pb-10 pt-20 px-6 sm:px-12 flex flex-col items-center relative bg-gradient-to-br ">
+    <section className="bg-black/70 pb-10 pt-20 px-6 sm:px-12 flex flex-col items-center relative bg-gradient-to-br">
       {showSuccess && (
         <div className="fixed top-20 z-50 left-1/2 -translate-x-1/2 px-6 py-3 bg-green-600 text-white rounded-2xl shadow-lg flex items-center gap-2 animate-fade-in">
           <svg
@@ -39,7 +57,10 @@ function Contact() {
         </div>
       )}
 
-      <div className="relative max-w-md w-full border border-white/30 shadow-2xl rounded-2xl  backdrop-blur-md p-8 flex flex-col gap-6 overflow-hidden">
+      <div
+        ref={cardRef}
+        className="opacity-0 relative max-w-md w-full border border-white/30 shadow-2xl rounded-2xl backdrop-blur-md p-8 flex flex-col gap-6 overflow-hidden"
+      >
         <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
         <h2 className="text-3xl font-bold text-violet-400 text-center tracking-wide drop-shadow-lg mb-2">
           Contacteer mij
@@ -100,6 +121,18 @@ function Contact() {
           </button>
         </form>
       </div>
+      <style>{`
+        .animate-fade-in-up {
+          opacity: 1 !important;
+          transform: translateY(0) scale(1);
+          transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
+        }
+        [class*="opacity-0"]:not(.animate-fade-in-up) {
+          opacity: 0;
+          transform: translateY(40px) scale(0.98);
+          transition: opacity 0.5s cubic-bezier(.4,0,.2,1), transform 0.5s cubic-bezier(.4,0,.2,1);
+        }
+      `}</style>
     </section>
   );
 }
