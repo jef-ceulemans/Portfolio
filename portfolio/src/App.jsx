@@ -158,7 +158,7 @@ function App() {
                     <SectionTransition color="violet" />
                 </section>
                 
-                <section id="about_me" className="scroll-mt-16 relative">
+                <section id="about_me" className="scroll-mt-13 relative">
                     <AnimatedParticles colors={["yellow", "violet"]} className="opacity-50" />
                     <div className="relative z-10">
                         <AboutMe />

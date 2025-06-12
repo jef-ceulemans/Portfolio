@@ -78,7 +78,7 @@ function Contact() {
               required
               value={formValues.email}
               onChange={handleChange}
-              className="w-full p-3 rounded-lg  text-gray-200 border border-white/20 focus:border-violet-400 focus:ring-2 focus:ring-violet-300 placeholder-gray-400 transition"
+              className="w-full p-3 rounded-lg  text-gray-200 border border-white/20 focus:border-violet-400 focus:ring-1 focus:outline-none focus:ring-violet-400 placeholder-gray-400 transition"
               placeholder="jouw@email.com"
               autoComplete="email"
               disabled={state.submitting}
@@ -101,7 +101,7 @@ function Contact() {
               rows="5"
               value={formValues.message}
               onChange={handleChange}
-              className="w-full p-3 rounded-lg text-gray-100 border border-white/20 focus:border-violet-400 focus:ring-2 focus:ring-violet-300 placeholder-gray-400 transition"
+              className="w-full p-3 rounded-lg text-gray-100 border border-white/20 focus:border-violet-400 focus:ring-1 focus:outline-none focus:ring-violet-400 placeholder-gray-400 transition"
               placeholder="Typ je bericht hier..."
               disabled={state.submitting}
             />
