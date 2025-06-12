@@ -43,9 +43,9 @@ const projects = [
             compleet met artiesten, podia, tickets en meer. De festivalganger zou dan naar deze website surfen 
             om de line-up te bekijken en tickets te kopen als er interesse is. `
         ],
-        contribution: `Mijn grootste verwezenlijking in dit project was het maken van de tijdschema's. Daarin kon je de planning van de podia per dag zien. Per podium zag je dan een tijdstabel van welke artiesten daar die dag zouden optreden. Ook heb ik authenticatie toegevoegd via Auth0. In de backend heb ik de API-routes beschermd zodat deze niet bereikt konden worden, behalve door de applicatie zelf. Verder heb ik ook adminrechten voorzien voor bepaalde delen van de applicatie.
+        contribution: `Mijn grootste verwezenlijking in dit project was het maken van de tijdschema's. Daarin was de planning van de podia per dag te zien. Per podium verscheen dan een tijdstabel van welke artiesten daar die dag zouden optreden. Ook heb ik authenticatie toegevoegd via Auth0. In de backend heb ik de API-routes beschermd zodat deze niet bereikt konden worden, behalve door de applicatie zelf. Verder heb ik ook adminrechten voorzien voor bepaalde delen van de applicatie.
 
-                        Ook heb ik de line-up pagina gemaakt. Op deze pagina stonden alle artiesten die naar het festival zouden komen. Hier heb ik gebruikgemaakt van een Spotify API, die al in de backend geïntegreerd was door mijn medestudent. Je kon ook op een artiest drukken om meer info over die artiest te vinden. Ik heb hier ook een iframe gebruikt om via Spotify het meest bekende liedje van deze artiest te laten zien en af te spelen. Verder heb ik de algemene lay-out van de applicatie gemaakt. Ik had een paar kleuren gedefinieerd in Tailwind zodat in de applicatie overal dezelfde kleuren gebruikt zouden worden.`,
+                        Ook heb ik de line-up pagina gemaakt. Op deze pagina stonden alle artiesten die naar het festival zouden komen. Hier heb ik gebruikgemaakt van een Spotify API, die al in de backend geïntegreerd was door mijn medestudent. Er kon ook op een artiest gedrukt worden om meer info over die artiest te vinden. Ik heb hier ook een iframe gebruikt om via Spotify het meest bekende liedje van deze artiest te laten zien en af te spelen. Verder heb ik de algemene lay-out van de applicatie gemaakt. Ik had een paar kleuren gedefinieerd in Tailwind zodat in de applicatie overal dezelfde kleuren gebruikt zouden worden.`,
         screenshots: [
             {
                 src: "/assets/images/projects/festival/artistinfo.png",
@@ -78,7 +78,7 @@ const projects = [
 
             Dit was ook een teamopdracht, en wij hadden ervoor gekozen om een autoscanner te maken. De app herkende een auto, bijvoorbeeld een Lamborghini Urus, en zou hierover specificaties geven, met nog extra functionaliteiten die in het bijbehorende filmpje ontdekt kunnen worden.`
         ],
-        demoDesc: `In de bijgevoegde live demo van de applicatie is te zien je hoe een auto wordt gescand en welke opties er dan beschikbaar zijn.`,
+        demoDesc: `In de bijgevoegde live demo van de applicatie is te zien hoe een auto wordt gescand en welke opties er dan beschikbaar zijn.`,
         contribution: `In dit project nam ik het volledige Unity-deel en Vuforia voor mijn rekening. Dit omvatte het trainen van de foto's van de auto's in Vuforia, die vervolgens in Unity moesten worden geïmporteerd. Het idee was dat zodra een auto herkend werd, er een 3D-model van die specifieke auto op het scherm zou verschijnen, samen met de bijbehorende informatie en een geluidje om het wat levendiger te maken. Ik had het ook zo opgezet dat gebruikers in de applicatie de kleur van de auto konden aanpassen, bijvoorbeeld naar groen. Als die specifieke auto dan gescand werd, zou het 3D-model de kleur hebben die men had ingesteld. Verder hield ik me bezig met de lay-out en het design van de applicatie.  
         
         Voor de toekomst zou de bestaande API vervangen kunnen worden door een echte backend in plaats van een JSON-server. Ook zouden bepaalde designopties verbeterd kunnen worden.`
@@ -125,7 +125,7 @@ Verder creëerde ik de aanmeldpagina voor de ploegen, waar teams op de wedstrijd
         image: "/assets/images/projects/ontwikkeling/ontwikkeling.jpg",
         tech: ["React Native", "Python Django", "PostgreSQL", "NativeWind"],
         description: [
-            `Dit project is momenteel in ontwikkeling. Ik werk aan een app voor het delen van reisfoto’s, waarbij gebruikers hun vrienden kunnen volgen. Per stad kunnen foto’s worden geüpload die de moeite waard zijn om te delen. Zo zie je in één oogopslag welke vrienden welke steden hebben bezocht en welke foto’s ze daar hebben gemaakt. Dit kan anderen inspireren om zelf ook die bestemmingen te verkennen. Bij elke locatie kan ook een korte tekst toegevoegd worden, waardoor het een soort persoonlijk reisdagboek wordt. 
+            `Dit project is momenteel in ontwikkeling. Ik werk aan een app voor het delen van reisfoto’s, waarbij gebruikers hun vrienden kunnen volgen. Per stad kunnen foto’s worden geüpload die de moeite waard zijn om te delen. Zo is in één oogopslag welke vrienden welke steden hebben bezocht en welke foto’s ze daar hebben gemaakt. Dit kan anderen inspireren om zelf ook die bestemmingen te verkennen. Bij elke locatie kan ook een korte tekst toegevoegd worden, waardoor het een soort persoonlijk reisdagboek wordt. 
             
             Met dit project wil ik mijn vaardigheden in React Native verder ontwikkelen, en tegelijk meer ervaring opdoen met Django, waarmee ik tot nu toe nog maar beperkt heb gewerkt.`
         ],
