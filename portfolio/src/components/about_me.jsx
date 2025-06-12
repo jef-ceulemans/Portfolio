@@ -82,7 +82,7 @@ export default function AboutMe() {
                                 </div>
                                 <p className="text-gray-200">
                                     Ik speel badminton en heb in het verleden deelgenomen aan toernooien. Ik gaf ook les
-                                    aan de jongste leden van mijn club als vrijwilliger. Badminton leert je zowel zelfstandig als in teamverband te werken,
+                                    aan de jongste leden van mijn club als vrijwilliger. Badminton leert mij zowel zelfstandig als in teamverband te werken,
                                     een goede weerspiegeling van hoe ik werk. Zowel solo- als samenwerkingsomgevingen passen bij mij.
                                     Ik kook ook graag, ik begon toen ik ongeveer tien jaar oud was, zelfs toen bracht ik een hele
                                     dag in de keuken door om een driegangenmaaltijd te bereiden. Gelukkig gaat het nu wat sneller. In mijn vrije tijd
