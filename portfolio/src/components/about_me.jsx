@@ -1,17 +1,38 @@
+import { useRef, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserGraduate, faBookOpen, faHeart, faBriefcase, faBullseye, faQuoteLeft, faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import Skills from './skills';
 
 export default function AboutMe() {
+    const cardRefs = [useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null),
+    ];
+
+    useEffect(() => {
+        const handleScroll = () => {
+            cardRefs.forEach(ref => {
+                if (ref.current) {
+                    const rect = ref.current.getBoundingClientRect();
+                    if (rect.top < window.innerHeight - 80) {
+                        ref.current.classList.add('animate-fade-in-up');
+                    }
+                }
+            });
+        };
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        handleScroll();
+
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [cardRefs]);
+
     return (
         <>
             <section
                 id="about_me"
-                className="bg-cover bg-center bg-black/70 text-gray-200 pt-30 pb-6 px-6 sm:px-12 "
-                //style={{ backgroundImage: "url('/assets/images/profile-photo/testen.jpeg')" }}
+                className="bg-cover bg-center bg-black/70 text-gray-200 pt-30 pb-6 px-6 sm:px-12"
                 alt="Profile photo of Jef Ceulemans"
             >
-                <div className=" backdrop-blur-md  p-8 sm:p-10 rounded-lg max-w-7xl mx-auto relative">
+                <div className="backdrop-blur-md p-8 sm:p-10 rounded-lg max-w-7xl mx-auto relative">
                     <div className="absolute -top-20 left-1/2 transform -translate-x-1/2">
                         <img
                             src="/assets/images/profile-photo/testen.jpg"
@@ -23,7 +44,7 @@ export default function AboutMe() {
                     <div className="mt-24">
                         <h2 className="text-4xl font-bold mb-8 text-center text-violet-400">Over mij</h2>
                         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-6">
-                            <div className=" border-white/30 border   shadow-lg rounded-2xl p-6  backdrop-blur-md  relative  lg:col-span-3 hover:border-violet-400 transition-colors duration-200">
+                            <div ref={cardRefs[0]} className="opacity-0 border-white/30 border shadow-lg rounded-2xl p-6 backdrop-blur-md relative lg:col-span-3 hover:border-violet-400 transition-colors duration-200">
                                 <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40 " />
 
                                 <div className="flex items-center mb-3">
@@ -38,7 +59,7 @@ export default function AboutMe() {
                                 </p>
                             </div>
 
-                            <div className="relative rounded-2xl p-6 lg:col-span-3 shadow-xl  backdrop-blur-md border border-white/30 overflow-hidden hover:border-violet-400 transition-colors duration-200 ">
+                            <div ref={cardRefs[1]} className="opacity-0 relative rounded-2xl p-6 lg:col-span-3 shadow-xl backdrop-blur-md border border-white/30 overflow-hidden hover:border-violet-400 transition-colors duration-200 ">
                                 <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40 " />
                                 <div className="flex items-center mb-3">
                                     <FontAwesomeIcon icon={faBookOpen} size="lg" className="text-violet-400 mr-3" />
@@ -52,7 +73,7 @@ export default function AboutMe() {
                                 </p>
                             </div>
 
-                            <div className=" border-white/30 shadow-lg rounded-2xl p-6 backdrop-blur-md hover:border-yellow-500 transition-colors duration-200   lg:col-span-4 border relative ">
+                            <div ref={cardRefs[2]} className="opacity-0 border-white/30 shadow-lg rounded-2xl p-6 backdrop-blur-md hover:border-yellow-500 transition-colors duration-200 lg:col-span-4 border relative ">
                                 <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40 " />
 
                                 <div className="flex items-center mb-3">
@@ -71,7 +92,7 @@ export default function AboutMe() {
                                 </p>
                             </div>
 
-                            <div className=" border-white/30 border shadow-lg rounded-2xl backdrop-blur-md relative  p-6 lg:col-span-2 hover:border-violet-400 transition-colors duration-200">
+                            <div ref={cardRefs[3]} className="opacity-0 border-white/30 border shadow-lg rounded-2xl backdrop-blur-md relative p-6 lg:col-span-2 hover:border-violet-400 transition-colors duration-200">
                                 <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40 " />
 
                                 <div className="flex items-center mb-3">
@@ -85,7 +106,7 @@ export default function AboutMe() {
                                 </p>
                             </div>
 
-                            <div className=" border-white/30 border shadow-lg rounded-2xl backdrop-blur-md relative  p-6 lg:col-span-2 hover:border-violet-400 transition-colors duration-200">
+                            <div ref={cardRefs[4]} className="opacity-0 border-white/30 border shadow-lg rounded-2xl backdrop-blur-md relative p-6 lg:col-span-2 hover:border-violet-400 transition-colors duration-200">
                                 <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40 " />
 
                                 <div className="flex items-center mb-3">
@@ -99,7 +120,7 @@ export default function AboutMe() {
                                 </p>
                             </div>
 
-                            <div className=" border-white/30 border shadow-lg rounded-2xl backdrop-blur-md relative  p-6 lg:col-span-2 hover:border-yellow-500 transition-colors duration-200">
+                            <div ref={cardRefs[5]} className="opacity-0 border-white/30 border shadow-lg rounded-2xl backdrop-blur-md relative p-6 lg:col-span-2 hover:border-yellow-500 transition-colors duration-200">
                                 <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40 " />
 
                                 <div className="flex items-center mb-3">
@@ -115,7 +136,7 @@ export default function AboutMe() {
                                 </p>
                             </div>
 
-                            <div className=" border-white/30 border shadow-lg rounded-2xl backdrop-blur-md relative  p-6 lg:col-span-2 flex flex-col justify-between hover:border-yellow-500 transition-colors duration-200">
+                            <div ref={cardRefs[6]} className="opacity-0 border-white/30 border shadow-lg rounded-2xl backdrop-blur-md relative p-6 lg:col-span-2 flex flex-col justify-between hover:border-yellow-500 transition-colors duration-200">
                                 <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40 " />
 
                                 <div className="flex items-center mb-3">
@@ -124,7 +145,7 @@ export default function AboutMe() {
                                 </div>
                                 <p className="text-gray-200 mb-4">Ontdek meer over mijn opleiding en werkervaring.</p>
                                 <a href="/assets/documents/cv/Curriculum vitae_Jef Ceulemans.pdf" target="_blank" rel="noopener noreferrer"
-                                    className="mt-auto w-full block px-6 py-3  text-violet-400 text-center rounded-md font-semibold border-2 border-violet-400 hover:bg-violet-400 hover:text-black transition"
+                                    className="mt-auto w-full block px-6 py-3 text-violet-400 text-center rounded-md font-semibold border-2 border-violet-400 hover:bg-violet-400 hover:text-black transition"
                                 >
                                     Open Curriculum vitae
                                 </a>
@@ -133,7 +154,18 @@ export default function AboutMe() {
                     </div>
                 </div>
             </section>
-
+            <style  >{`
+                .animate-fade-in-up {
+                  opacity: 1 !important;
+                  transform: translateY(0) scale(1);
+                  transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
+                }
+                [class*="opacity-0"]:not(.animate-fade-in-up) {
+                  opacity: 0;
+                  transform: translateY(40px) scale(0.98);
+                  transition: opacity 0.5s cubic-bezier(.4,0,.2,1), transform 0.5s cubic-bezier(.4,0,.2,1);
+                }
+            `}</style>
             <Skills />
         </>
     );
