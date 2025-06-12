@@ -44,7 +44,7 @@ function Contact() {
   return (
     <section className="bg-black/70 pb-10 pt-20 px-6 sm:px-12 flex flex-col items-center relative bg-gradient-to-br">
       {showSuccess && (
-        <div className="fixed top-20 z-50 left-1/2 -translate-x-1/2 px-6 py-3 bg-green-600 text-white rounded-2xl shadow-lg flex items-center gap-2 animate-fade-in">
+        <div className="fixed top-20 z-50 left-1/2 -translate-x-1/2 px-6 py-3 bg-green-800 text-white rounded-2xl shadow-lg flex items-center gap-2 animate-fade-in">
           <svg
             className="w-6 h-6 text-white"
             fill="none"
