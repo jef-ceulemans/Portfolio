@@ -148,60 +148,38 @@ function ProjectModal({ project, onClose }) {
     if (!project) return null;
 
     if (project.id === 2) {
-        return (
-            <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm">
-                <div className="relative z-50 w-full max-w-7xl mx-auto">
-                    <div className="m-2 sm:m-4 mb-10 mt-32 sm:mt-24 relative bg-black/80 border border-white/30 rounded-2xl p-4 sm:p-10 shadow-2xl max-h-[96vh] sm:max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden">
-                        <button
-                            onClick={onClose}
-                            className="sticky top-0 right-0 ml-auto  z-50 block text-4xl text-yellow-500 hover:text-yellow-400  rounded-full w-12 h-12 flex items-center justify-center p-2"
-                            aria-label="Sluit modal"
-                        >
-                            &times;
-                        </button>
-                        <h3 className="lg:col-span-8 text-violet-400 text-3xl font-bold mb-10  text-center">{project.title}</h3>
-                        <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-8">
-                            <div className="lg:col-span-4 flex flex-col justify-start gap-6">
-                                <div className="relative border border-white/30 shadow-lg rounded-2xl p-6  backdrop-blur-md overflow-hidden hover:border-violet-400 transition-colors duration-200">
-                                    <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
-                                    <h3 className="text-xl font-bold text-yellow-500 mb-4   drop-shadow-sm tracking-wide">Projectoverzicht</h3>
-                                    {project.description.map((desc, i) => (
-                                        <p className="text-gray-200 " key={i}>{desc}</p>
-                                    ))}
-                                </div>
-                                <div className="relative border border-white/30 shadow-lg rounded-2xl p-6  backdrop-blur-md overflow-hidden hover:border-violet-400 transition-colors duration-200">
-                                    <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
-                                    <h3 className="text-xl font-bold text-yellow-500 mb-4  drop-shadow-sm tracking-wide">Mijn bijdrage</h3>
-                                    <p className="text-gray-200 whitespace-pre-line">{project.contribution}</p>
-                                </div>
-                            </div>
-                            <div className="lg:col-span-4 flex flex-col h-full justify-center items-center gap-6">
-                                {project.screenshots && project.screenshots.map((s, i) => (
-                                    <div
-                                        key={i}
-                                        className="relative w-full flex flex-col items-center border border-white/30 shadow-lg rounded-2xl p-4  backdrop-blur-md overflow-hidden hover:border-violet-400 transition-colors duration-200"
-                                    >
-                                        <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
-                                        <img
-                                            src={s.src}
-                                            alt={s.caption || `Screenshot ${i + 1}`}
-                                            className="rounded-xl shadow-lg max-h-72 object-contain mb-2"
-                                        />
-                                        {s.caption && (
-                                            <span className="text-gray-200 text-sm">{s.caption}</span>
-                                        )}
-                                    </div>
+    return (
+        <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm">
+            <div className="relative z-50 w-full max-w-7xl mx-auto px-2 sm:px-6">
+                <div className="relative bg-black/80 border border-white/30 rounded-2xl p-4 sm:p-10 shadow-2xl max-h-[96vh] sm:max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden mt-32 sm:mt-24 mb-10">
+                    <button
+                        onClick={onClose}
+                        className="sticky top-0 right-0 ml-auto  z-50 block text-4xl text-yellow-500 hover:text-yellow-400  rounded-full w-12 h-12 flex items-center justify-center p-2"
+                        aria-label="Sluit modal"
+                    >
+                        &times;
+                    </button>
+                    <h3 className="lg:col-span-8 text-violet-400 text-3xl font-bold mb-10  text-center">{project.title}</h3>
+                    <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-8">
+                        <div className="lg:col-span-4 flex flex-col justify-start gap-6">
+                            <div className="relative border border-white/30 shadow-lg rounded-2xl p-6  backdrop-blur-md overflow-hidden hover:border-violet-400 transition-colors duration-200">
+                                <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
+                                <h3 className="text-xl font-bold text-yellow-500 mb-4   drop-shadow-sm tracking-wide">Projectoverzicht</h3>
+                                {project.description.map((desc, i) => (
+                                    <p className="text-gray-200 " key={i}>{desc}</p>
                                 ))}
                             </div>
-
-
-
+                            <div className="relative border border-white/30 shadow-lg rounded-2xl p-6  backdrop-blur-md overflow-hidden hover:border-violet-400 transition-colors duration-200">
+                                <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
+                                <h3 className="text-xl font-bold text-yellow-500 mb-4  drop-shadow-sm tracking-wide">Mijn bijdrage</h3>
+                                <p className="text-gray-200 whitespace-pre-line">{project.contribution}</p>
+                            </div>
                         </div>
-                        <div className="lg:col-span-4 flex flex-col lg:flex-row h-full items-center gap-6 mt-6">
-                            {project.woeps && project.woeps.map((s, i) => (
+                        <div className="lg:col-span-4 flex flex-col h-full justify-center items-center gap-6">
+                            {project.screenshots && project.screenshots.map((s, i) => (
                                 <div
                                     key={i}
-                                    className="relative flex flex-col items-center border border-white/30 shadow-lg rounded-2xl p-4 backdrop-blur-md overflow-hidden hover:border-violet-400 transition-colors duration-200 w-full lg:w-auto"
+                                    className="relative w-full flex flex-col items-center border border-white/30 shadow-lg rounded-2xl p-4  backdrop-blur-md overflow-hidden hover:border-violet-400 transition-colors duration-200"
                                 >
                                     <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
                                     <img
@@ -216,366 +194,70 @@ function ProjectModal({ project, onClose }) {
                             ))}
                         </div>
                     </div>
-                </div>
-                <div
-                    className="fixed inset-0 z-40"
-                    onClick={onClose}
-                    aria-label="Sluit modal"
-                    tabIndex={-1}
-                />
-            </div>
-        );
-    }
-
-    if (project.id === 3) {
-        return (
-            <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm">
-                <div className="relative z-50 w-full max-w-7xl mx-auto">
-                    <div className="m-2 sm:m-4 mb-10 mt-32 sm:mt-24 relative bg-black/80 border border-white/30 rounded-2xl p-8 sm:p-10 shadow-2xl max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden">
-                        <button
-                            onClick={onClose}
-                            className="sticky top-0 right-0 ml-auto  z-50 block text-4xl text-yellow-500 hover:text-yellow-400  rounded-full w-12 h-12 flex items-center justify-center p-2"
-                            aria-label="Sluit modal"
-                        >
-                            &times;
-                        </button>
-                        <h3 className="lg:col-span-8 text-violet-400 text-3xl font-bold mb-10  text-center">{project.title}</h3>
-
-                        <div className="relative border border-white/30 shadow-lg rounded-2xl p-6 mb-8 backdrop-blur-md overflow-hidden hover:border-violet-400 transition-colors duration-200">
-                            <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
-                            <h3 className="text-xl font-bold text-yellow-500 mb-4   drop-shadow-sm tracking-wide">Projectoverzicht</h3>
-                            {project.description.map((desc, i) => (
-                                <p className="text-gray-200 mb-3" key={i}>{desc}</p>
-                            ))}
-                        </div>
-
-                        <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-8">
-                            <div className="lg:col-span-5 flex flex-col justify-start gap-6 self-center">
-                                <div className="  relative border border-white/30 shadow-lg rounded-2xl p-6 backdrop-blur-md overflow-hidden hover:border-violet-400 transition-colors duration-200">
-                                    <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
-                                    <h3 className="text-xl font-bold text-yellow-500 mb-4  drop-shadow-sm tracking-wide">Mijn bijdrage</h3>
-                                    <p className="text-gray-200 whitespace-pre-line">{project.contribution}</p>
-                                </div>
-                            </div>
-                            <div className="lg:col-span-3 flex flex-col h-full justify-center gap-6">
-                                {project.videoDemo && (
-                                    <div className="relative w-full rounded-2xl shadow-lg overflow-hidden border border-white/30 flex flex-col p-6 gap-4  backdrop-blur-md hover:border-violet-400 transition-colors duration-200">
-                                        <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
-                                        <h3 className="text-xl font-bold text-yellow-500 mb-4  drop-shadow-sm tracking-wide">Demo</h3>
-
-
-                                        <div className="mb-2">
-                                            <p className="text-gray-200 text-base leading-relaxed">
-                                                {project.demoDesc}
-                                            </p>
-                                        </div>
-                                        <div className="w-full aspect-video rounded-xl overflow-hidden shadow-inner">
-                                            <iframe
-                                                className="w-full h-full"
-                                                src={project.videoDemo}
-                                                title="YouTube demo video"
-                                                frameBorder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                                referrerPolicy="strict-origin-when-cross-origin"
-                                                allowFullScreen
-                                                aria-label="Stage project video"
-                                            ></iframe>
-                                        </div>
-                                    </div>
-                                )}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    className="fixed inset-0 z-40"
-                    onClick={onClose}
-                    aria-label="Sluit modal"
-                    tabIndex={-1}
-                />
-            </div>
-        );
-    }
-    if (project.id === 4) {
-        return (
-            <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm">
-                <div className="relative z-50 w-full max-w-7xl mx-auto">
-                    <div className="m-2 sm:m-4 mb-10 mt-32 sm:mt-24 relative bg-black/80 border border-white/30 rounded-2xl p-8 sm:p-10 shadow-2xl max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden">
-                        <button
-                            onClick={onClose}
-                            className="sticky top-0 right-0 ml-auto  z-50 block text-4xl text-yellow-500 hover:text-yellow-400  rounded-full w-12 h-12 flex items-center justify-center p-2"
-                            aria-label="Sluit modal"
-                        >
-                            &times;
-                        </button>
-                        <h3 className="lg:col-span-8 text-violet-400 text-3xl font-bold mb-10 text-center">{project.title}</h3>
-
-                        <div className="relative border border-white/30 shadow-lg rounded-2xl p-6 mb-8 backdrop-blur-md overflow-hidden hover:border-violet-400 transition-colors duration-200">
-                            <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
-                            <h3 className="text-xl font-bold text-yellow-500 mb-4   drop-shadow-sm tracking-wide">Projectoverzicht</h3>
-                            {project.description.map((desc, i) => (
-                                <p className="text-gray-200 mb-3 whitespace-pre-line" key={i}>{desc}</p>
-                            ))}
-                        </div>
-
-                        <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-8">
-                            <div className="lg:col-span-5 flex flex-col justify-start gap-6 self-center">
-                                <div className="relative border border-white/30 shadow-lg rounded-2xl p-6 backdrop-blur-md overflow-hidden hover:border-violet-400 transition-colors duration-200">
-                                    <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
-                                    <h3 className="text-xl font-bold text-yellow-500 mb-4  drop-shadow-sm tracking-wide">Mijn bijdrage</h3>
-                                    <p className="text-gray-200 whitespace-pre-line">{project.contribution}</p>
-                                </div>
-                            </div>
-
-                            <div className="lg:col-span-3 flex flex-col h-full justify-center gap-6">
-                                {project.videoDemo && (
-                                    <div className="relative w-full rounded-2xl shadow-lg overflow-hidden border border-white/30 flex flex-col p-6 gap-4 backdrop-blur-md hover:border-violet-400 transition-colors duration-200">
-                                        <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
-                                        <h3 className="text-xl font-bold text-yellow-500   drop-shadow-sm tracking-wide">Demo chromometer</h3>
-                                        <div className="mb-1">
-                                            <p className="text-gray-200 text-base leading-relaxed">
-                                                {project.demoDesc}
-                                            </p>
-                                        </div>
-                                        <div className="w-full aspect-video rounded-xl overflow-hidden shadow-inner">
-                                            <iframe
-                                                className="w-full h-full"
-                                                src={project.videoDemo}
-                                                title="YouTube demo video"
-                                                frameBorder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                                referrerPolicy="strict-origin-when-cross-origin"
-                                                allowFullScreen
-                                                aria-label="Stage project video"
-                                            ></iframe>
-                                        </div>
-                                    </div>
-                                )}
-                            </div>
-
-                            {project.screenshots && project.screenshots.length > 0 && (
-                                <div className="lg:col-span-5 flex flex-col items-center gap-6">
-                                    {project.screenshots.map((s, i) => (
-                                        <div
-                                            key={i}
-                                            className="relative w-full flex flex-col items-center border border-white/30 shadow-lg rounded-2xl p-4 backdrop-blur-md overflow-hidden hover:border-violet-400 transition-colors duration-200"
-                                        >
-                                            <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
-                                            <img
-                                                src={s.src}
-                                                alt={s.caption || `Screenshot ${i + 1}`}
-                                                className="rounded-xl shadow-lg max-h-auto object-contain mb-2"
-                                            />
-                                            {s.caption && (
-                                                <span className="text-gray-200 text-sm">{s.caption}</span>
-                                            )}
-                                        </div>
-                                    ))}
-                                </div>
-                            )}
-
-                            <div className="lg:col-span-3 flex flex-col h-full justify-center gap-6">
-                                <div className="relative border border-white/30 shadow-lg rounded-2xl p-6 backdrop-blur-md overflow-hidden hover:border-yellow-500 transition-colors duration-200">
-                                    <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
-                                    <h3 className="text-yellow-500 text-xl mb-3">Link website</h3>
-                                    {project.url && (
-                                        <div className="flex justify-center">
-                                            <a
-                                                href={project.url}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="text-center block w-full border border-yellow-500 text-yellow-500 font-semibold py-2 px-4 rounded hover:bg-yellow-500 hover:text-black transition"
-                                            >
-                                                Bezoek website
-                                            </a>
-                                        </div>
-                                    )}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    className="fixed inset-0 z-40"
-                    onClick={onClose}
-                    aria-label="Sluit modal"
-                    tabIndex={-1}
-                />
-            </div>
-        );
-    }
-    if (project.id === 5) {
-        return (
-            <div className="fixed inset-0 z-50 flex items-center justify-center  backdrop-blur-sm">
-                <div className="relative z-50 w-full max-w-7xl mx-auto">
-                    <div className="mt-32  sm:mt-16 m-4 relative bg-black/80 border border-white/30 rounded-2xl p-8 sm:p-10 shadow-2xl max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden">
-                        <button
-                            onClick={onClose}
-                            className="sticky top-0 right-0 ml-auto z-50 block text-4xl text-yellow-500 hover:text-yellow-400 rounded-full w-12 h-12 flex items-center justify-center p-2"
-                            aria-label="Sluit modal"
-                        >
-                            &times;
-                        </button>
-                        <h3 className="text-violet-400 text-3xl font-bold mb-10 text-center">{project.title}</h3>
-
-                        <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-8">
-                            <div className="lg:col-span-4 relative border border-white/30 shadow-lg rounded-2xl p-6 backdrop-blur-md overflow-hidden hover:border-violet-400 transition-colors duration-200 flex flex-col justify-center">
+                    <div className="lg:col-span-4 flex flex-col lg:flex-row h-full items-center gap-6 mt-6">
+                        {project.woeps && project.woeps.map((s, i) => (
+                            <div
+                                key={i}
+                                className="relative flex flex-col items-center border border-white/30 shadow-lg rounded-2xl p-4 backdrop-blur-md overflow-hidden hover:border-violet-400 transition-colors duration-200 w-full lg:w-auto"
+                            >
                                 <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
-                                <h3 className="text-xl font-bold text-yellow-500 mb-4   drop-shadow-sm tracking-wide">Projectoverzicht</h3>
-                                {project.description.map((desc, i) => (
-                                    <p className="text-gray-200 mb-3 whitespace-pre-line" key={i}>{desc}</p>
-                                ))}
+                                <img
+                                    src={s.src}
+                                    alt={s.caption || `Screenshot ${i + 1}`}
+                                    className="rounded-xl shadow-lg max-h-72 object-contain mb-2"
+                                />
+                                {s.caption && (
+                                    <span className="text-gray-200 text-sm">{s.caption}</span>
+                                )}
                             </div>
-                            {project.videoDemo && (
-                                <div className="lg:col-span-4 flex flex-col h-full justify-center items-center gap-6">
-                                    <div className="relative w-full rounded-2xl shadow-lg overflow-hidden border border-white/30 flex flex-col p-6 gap-4 backdrop-blur-md hover:border-violet-400 transition-colors duration-200">
-                                        <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
-                                        <h3 className="text-xl font-bold text-yellow-500  drop-shadow-sm tracking-wide">Demo</h3>
-                                        <div className="mb-2">
-                                            <p className="text-gray-200 text-base leading-relaxed">
-                                                {project.demoDesc}
-                                            </p>
-                                        </div>
-                                        <div className="w-full aspect-video rounded-xl overflow-hidden shadow-inner">
-                                            <iframe
-                                                className="w-full h-full"
-                                                src={project.videoDemo}
-                                                title="YouTube demo video"
-                                                frameBorder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                                referrerPolicy="strict-origin-when-cross-origin"
-                                                allowFullScreen
-                                                aria-label="Stage project video"
-                                            ></iframe>
-                                        </div>
-                                    </div>
-                                </div>
-                            )}
-                        </div>
+                        ))}
                     </div>
                 </div>
-                <div
-                    className="fixed inset-0 z-40"
-                    onClick={onClose}
-                    aria-label="Sluit modal"
-                    tabIndex={-1}
-                />
             </div>
-        );
-    }
+            <div
+                className="fixed inset-0 z-40"
+                onClick={onClose}
+                aria-label="Sluit modal"
+                tabIndex={-1}
+            />
+        </div>
+    );
+}
 
-    if (project.id === 6) {
-        return (
-            <div className="fixed inset-0 z-50 flex items-center justify-center  backdrop-blur-sm">
-                <div className="relative z-50 w-full max-w-7xl mx-auto">
-                    <div className="mt-32 sm:mt-0 m-4 relative bg-black/80 border border-white/30 rounded-2xl p-8 sm:p-10 shadow-2xl max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden">
-                        <button
-                            onClick={onClose}
-                            className="sticky top-0 right-0 ml-auto z-50 block text-4xl text-yellow-500 hover:text-yellow-400  rounded-full w-12 h-12 flex items-center justify-center p-2"
-                            aria-label="Sluit modal"
-                        >
-                            &times;
-                        </button>
-                        <h3 className="lg:col-span-8 text-violet-400 text-3xl font-bold mb-10  text-center">{project.title}</h3>
-
-                        <div className="relative border border-white/30 shadow-lg rounded-2xl p-6 mb-8 backdrop-blur-md overflow-hidden hover:border-violet-400 transition-colors duration-200">
-                            <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
-                            <h3 className="text-xl font-bold text-yellow-500 mb-4   drop-shadow-sm tracking-wide">Projectoverzicht</h3>
-                            {project.description.map((desc, i) => (
-                                <p className="text-gray-200 mb-3 whitespace-pre-line" key={i}>{desc}</p>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-                <div
-                    className="fixed inset-0 z-40"
-                    onClick={onClose}
-                    aria-label="Sluit modal"
-                    tabIndex={-1}
-                />
-            </div>
-        );
-    }
-
+   if (project.id === 3) {
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm">
-            <div className="relative z-50 w-full max-w-7xl mx-auto">
-                <div
-                    className="m-2 sm:m-4 mb-10 mt-32 sm:mt-24 relative bg-black/70 border border-white/30 rounded-2xl p-8 sm:p-10 shadow-2xl max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden"
-                >
+        <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm p-2 sm:p-6">
+            <div className="relative z-50 w-full max-w-7xl mx-auto box-border">
+                <div className="relative bg-black/80 border border-white/30 rounded-2xl p-4 sm:p-10 shadow-2xl max-w-full max-h-[96vh] sm:max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden mt-32 sm:mt-24 mb-10">
                     <button
                         onClick={onClose}
-                        className="sticky top-0 right-0 ml-auto mb-2 z-50 block text-4xl text-yellow-500 hover:text-yellow-400  rounded-full w-12 h-12 flex items-center justify-center p-2"
+                        className="sticky top-0 right-0 ml-auto  z-50 block text-4xl text-yellow-500 hover:text-yellow-400  rounded-full w-12 h-12 flex items-center justify-center p-2"
                         aria-label="Sluit modal"
                     >
                         &times;
                     </button>
                     <h3 className="lg:col-span-8 text-violet-400 text-3xl font-bold mb-10  text-center">{project.title}</h3>
+                    <div className="relative border border-white/30 shadow-lg rounded-2xl p-6 mb-8 backdrop-blur-md overflow-hidden hover:border-violet-400 transition-colors duration-200">
+                        <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
+                        <h3 className="text-xl font-bold text-yellow-500 mb-4   drop-shadow-sm tracking-wide">Projectoverzicht</h3>
+                        {project.description.map((desc, i) => (
+                            <p className="text-gray-200 mb-3" key={i}>{desc}</p>
+                        ))}
+                    </div>
 
                     <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-8">
-                        <div className="lg:col-span-4 flex flex-col justify-start">
+                        <div className="lg:col-span-5 flex flex-col justify-start gap-6 self-center">
                             <div className="relative border border-white/30 shadow-lg rounded-2xl p-6 backdrop-blur-md overflow-hidden hover:border-violet-400 transition-colors duration-200">
                                 <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
-                                <h3 className="text-xl font-bold text-yellow-500 mb-4   drop-shadow-sm tracking-wide">Projectoverzicht</h3>
-                                {project.description.map((desc, i) => (
-                                    <p className="text-gray-200 mb-3" key={i}>{desc}</p>
-                                ))}
+                                <h3 className="text-xl font-bold text-yellow-500 mb-4 drop-shadow-sm tracking-wide">Mijn bijdrage</h3>
+                                <p className="text-gray-200 whitespace-pre-line">{project.contribution}</p>
                             </div>
                         </div>
-
-                        {project.screenshots && project.screenshots.length > 0 && (
-                            <div className="lg:col-span-4 flex flex-col items-center gap-6">
-                                {project.screenshots.map((s, i) => (
-                                    <div
-                                        key={i}
-                                        className="relative w-full flex flex-col items-center border border-white/30 shadow-lg rounded-2xl p-4 backdrop-blur-md overflow-hidden hover:border-violet-400 transition-colors duration-200"
-                                    >
-                                        <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
-                                        <img
-                                            src={s.src}
-                                            alt={s.caption || `Screenshot ${i + 1}`}
-                                            className="rounded-xl shadow-lg max-h-72 object-contain mb-2"
-                                        />
-                                        {s.caption && (
-                                            <span className="text-gray-200 text-sm">{s.caption}</span>
-                                        )}
-                                    </div>
-                                ))}
-                            </div>
-                        )}
-
-                        <div className="lg:col-span-4 flex items-center">
-                            {project.videoPromo && (
-                                <div className="relative w-full rounded-2xl shadow-lg overflow-hidden border border-white/30 flex flex-col p-6 gap-4 backdrop-blur-md hover:border-violet-400 transition-colors duration-200">
-                                    <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
-                                    <h3 className="text-xl font-bold text-yellow-500   drop-shadow-sm tracking-wide">Promotie video</h3>
-                                    <div className="">
-                                        <p className="text-gray-200 text-base leading-relaxed">
-                                            Hier is een promotie filmpje te zien van onze applicatie.
-                                        </p>
-                                    </div>
-                                    <div className="w-full aspect-video rounded-xl overflow-hidden shadow-inner">
-                                        <iframe
-                                            className="w-full h-full"
-                                            src={project.videoPromo}
-                                            title="YouTube video player"
-                                            frameBorder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            referrerPolicy="strict-origin-when-cross-origin"
-                                            allowFullScreen
-                                            aria-label="Stage project video"
-                                        ></iframe>
-                                    </div>
-                                </div>
-                            )}
-                        </div>
-
-                        <div className="lg:col-span-4 flex items-center">
+                        <div className="lg:col-span-3 flex flex-col h-full justify-center gap-6">
                             {project.videoDemo && (
                                 <div className="relative w-full rounded-2xl shadow-lg overflow-hidden border border-white/30 flex flex-col p-6 gap-4 backdrop-blur-md hover:border-violet-400 transition-colors duration-200">
                                     <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
-                                    <h3 className="text-xl font-bold text-yellow-500   drop-shadow-sm tracking-wide">Demo</h3>
-
+                                    <h3 className="text-xl font-bold text-yellow-500 mb-4 drop-shadow-sm tracking-wide">Demo</h3>
                                     <div className="mb-2">
                                         <p className="text-gray-200 text-base leading-relaxed">
                                             {project.demoDesc}
@@ -596,12 +278,111 @@ function ProjectModal({ project, onClose }) {
                                 </div>
                             )}
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                className="fixed inset-0 z-40"
+                onClick={onClose}
+                aria-label="Sluit modal"
+                tabIndex={-1}
+            />
+        </div>
+    );
+}
+    if (project.id === 4) {
+    return (
+        <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm p-2 sm:p-6">
+            <div className="relative z-50 w-full max-w-7xl mx-auto box-border">
+                <div className="relative bg-black/80 border border-white/30 rounded-2xl p-4 sm:p-10 shadow-2xl max-w-full max-h-[96vh] sm:max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden mt-32 sm:mt-24 mb-10">
+                    <button
+                        onClick={onClose}
+                        className="sticky top-0 right-0 ml-auto  z-50 block text-4xl text-yellow-500 hover:text-yellow-400  rounded-full w-12 h-12 flex items-center justify-center p-2"
+                        aria-label="Sluit modal"
+                    >
+                        &times;
+                    </button>
+                    <h3 className="lg:col-span-8 text-violet-400 text-3xl font-bold mb-10 text-center">{project.title}</h3>
+                    <div className="relative border border-white/30 shadow-lg rounded-2xl p-6 mb-8 backdrop-blur-md overflow-hidden hover:border-violet-400 transition-colors duration-200">
+                        <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
+                        <h3 className="text-xl font-bold text-yellow-500 mb-4   drop-shadow-sm tracking-wide">Projectoverzicht</h3>
+                        {project.description.map((desc, i) => (
+                            <p className="text-gray-200 mb-3 whitespace-pre-line" key={i}>{desc}</p>
+                        ))}
+                    </div>
 
-                        <div className="lg:col-span-4 flex flex-col justify-center">
+                    <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-8">
+                        <div className="lg:col-span-5 flex flex-col justify-start gap-6 self-center">
                             <div className="relative border border-white/30 shadow-lg rounded-2xl p-6 backdrop-blur-md overflow-hidden hover:border-violet-400 transition-colors duration-200">
                                 <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
                                 <h3 className="text-xl font-bold text-yellow-500 mb-4  drop-shadow-sm tracking-wide">Mijn bijdrage</h3>
                                 <p className="text-gray-200 whitespace-pre-line">{project.contribution}</p>
+                            </div>
+                        </div>
+
+                        <div className="lg:col-span-3 flex flex-col h-full justify-center gap-6">
+                            {project.videoDemo && (
+                                <div className="relative w-full rounded-2xl shadow-lg overflow-hidden border border-white/30 flex flex-col p-6 gap-4 backdrop-blur-md hover:border-violet-400 transition-colors duration-200">
+                                    <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
+                                    <h3 className="text-xl font-bold text-yellow-500   drop-shadow-sm tracking-wide">Demo chronometer</h3>
+                                    <div className="mb-1">
+                                        <p className="text-gray-200 text-base leading-relaxed">
+                                            {project.demoDesc}
+                                        </p>
+                                    </div>
+                                    <div className="w-full aspect-video rounded-xl overflow-hidden shadow-inner">
+                                        <iframe
+                                            className="w-full h-full"
+                                            src={project.videoDemo}
+                                            title="YouTube demo video"
+                                            frameBorder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            referrerPolicy="strict-origin-when-cross-origin"
+                                            allowFullScreen
+                                            aria-label="Stage project video"
+                                        ></iframe>
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+
+                        {project.screenshots && project.screenshots.length > 0 && (
+                            <div className="lg:col-span-5 flex flex-col items-center gap-6">
+                                {project.screenshots.map((s, i) => (
+                                    <div
+                                        key={i}
+                                        className="relative w-full flex flex-col items-center border border-white/30 shadow-lg rounded-2xl p-4 backdrop-blur-md overflow-hidden hover:border-violet-400 transition-colors duration-200"
+                                    >
+                                        <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
+                                        <img
+                                            src={s.src}
+                                            alt={s.caption || `Screenshot ${i + 1}`}
+                                            className="rounded-xl shadow-lg max-h-auto object-contain mb-2"
+                                        />
+                                        {s.caption && (
+                                            <span className="text-gray-200 text-sm">{s.caption}</span>
+                                        )}
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+
+                        <div className="lg:col-span-3 flex flex-col h-full justify-center gap-6">
+                            <div className="relative border border-white/30 shadow-lg rounded-2xl p-6 backdrop-blur-md overflow-hidden hover:border-yellow-500 transition-colors duration-200">
+                                <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
+                                <h3 className="text-yellow-500 text-xl mb-3">Link website</h3>
+                                {project.url && (
+                                    <div className="flex justify-center">
+                                        <a
+                                            href={project.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-center block w-full border border-yellow-500 text-yellow-500 font-semibold py-2 px-4 rounded hover:bg-yellow-500 hover:text-black transition"
+                                        >
+                                            Bezoek website
+                                        </a>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </div>
@@ -615,6 +396,215 @@ function ProjectModal({ project, onClose }) {
             />
         </div>
     );
+}
+    if (project.id === 5) {
+    return (
+        <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm p-2 sm:p-6">
+            <div className="relative z-50 w-full max-w-7xl mx-auto box-border">
+                <div className="mt-32 sm:mt-16 relative bg-black/80 border border-white/30 rounded-2xl p-4 sm:p-10 shadow-2xl max-w-full max-h-[96vh] sm:max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden">
+                    <button
+                        onClick={onClose}
+                        className="sticky top-0 right-0 ml-auto z-50 block text-4xl text-yellow-500 hover:text-yellow-400 rounded-full w-12 h-12 flex items-center justify-center p-2"
+                        aria-label="Sluit modal"
+                    >
+                        &times;
+                    </button>
+                    <h3 className="text-violet-400 text-3xl font-bold mb-10 text-center">{project.title}</h3>
+                    <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-8">
+                        <div className="lg:col-span-4 relative border border-white/30 shadow-lg rounded-2xl p-6 backdrop-blur-md overflow-hidden hover:border-violet-400 transition-colors duration-200 flex flex-col justify-center">
+                            <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
+                            <h3 className="text-xl font-bold text-yellow-500 mb-4 drop-shadow-sm tracking-wide">Projectoverzicht</h3>
+                            {project.description.map((desc, i) => (
+                                <p className="text-gray-200 mb-3 whitespace-pre-line" key={i}>{desc}</p>
+                            ))}
+                        </div>
+                        {project.videoDemo && (
+                            <div className="lg:col-span-4 flex flex-col h-full justify-center items-center gap-6">
+                                <div className="relative w-full rounded-2xl shadow-lg overflow-hidden border border-white/30 flex flex-col p-6 gap-4 backdrop-blur-md hover:border-violet-400 transition-colors duration-200">
+                                    <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
+                                    <h3 className="text-xl font-bold text-yellow-500 drop-shadow-sm tracking-wide">Demo</h3>
+                                    <div className="mb-2">
+                                        <p className="text-gray-200 text-base leading-relaxed">
+                                            {project.demoDesc}
+                                        </p>
+                                    </div>
+                                    <div className="w-full aspect-video rounded-xl overflow-hidden shadow-inner">
+                                        <iframe
+                                            className="w-full h-full"
+                                            src={project.videoDemo}
+                                            title="YouTube demo video"
+                                            frameBorder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            referrerPolicy="strict-origin-when-cross-origin"
+                                            allowFullScreen
+                                            aria-label="Stage project video"
+                                        ></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            </div>
+            <div
+                className="fixed inset-0 z-40"
+                onClick={onClose}
+                aria-label="Sluit modal"
+                tabIndex={-1}
+            />
+        </div>
+    );
+}
+
+    if (project.id === 6) {
+    return (
+        <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm p-2 sm:p-6">
+            <div className="relative z-50 w-full max-w-7xl mx-auto box-border">
+                <div className="mt-16 sm:mt-0 relative bg-black/80 border border-white/30 rounded-2xl p-4 sm:p-10 shadow-2xl max-w-full max-h-[96vh] sm:max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden">
+                    <button
+                        onClick={onClose}
+                        className="sticky top-0 right-0 ml-auto z-50 block text-4xl text-yellow-500 hover:text-yellow-400 rounded-full w-12 h-12 flex items-center justify-center p-2"
+                        aria-label="Sluit modal"
+                    >
+                        &times;
+                    </button>
+                    <h3 className="lg:col-span-8 text-violet-400 text-3xl font-bold mb-10 text-center">{project.title}</h3>
+                    <div className="relative border border-white/30 shadow-lg rounded-2xl p-6 mb-8 backdrop-blur-md overflow-hidden hover:border-violet-400 transition-colors duration-200">
+                        <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
+                        <h3 className="text-xl font-bold text-yellow-500 mb-4 drop-shadow-sm tracking-wide">Projectoverzicht</h3>
+                        {project.description.map((desc, i) => (
+                            <p className="text-gray-200 mb-3 whitespace-pre-line" key={i}>{desc}</p>
+                        ))}
+                    </div>
+                </div>
+            </div>
+            <div
+                className="fixed inset-0 z-40"
+                onClick={onClose}
+                aria-label="Sluit modal"
+                tabIndex={-1}
+            />
+        </div>
+    );
+}
+return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm p-2 sm:p-6">
+        <div className="relative z-50 w-full max-w-7xl mx-auto box-border">
+            <div
+                className="mb-10 mt-16 sm:mt-24 relative bg-black/70 border border-white/30 rounded-2xl p-4 sm:p-10 shadow-2xl max-w-full max-h-[96vh] sm:max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden"
+            >
+                <button
+                    onClick={onClose}
+                    className="sticky top-0 right-0 ml-auto mb-2 z-50 block text-4xl text-yellow-500 hover:text-yellow-400  rounded-full w-12 h-12 flex items-center justify-center p-2"
+                    aria-label="Sluit modal"
+                >
+                    &times;
+                </button>
+                <h3 className="lg:col-span-8 text-violet-400 text-3xl font-bold mb-10  text-center">{project.title}</h3>
+
+                <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-8">
+                    <div className="lg:col-span-4 flex flex-col justify-start">
+                        <div className="relative border border-white/30 shadow-lg rounded-2xl p-6 backdrop-blur-md overflow-hidden hover:border-violet-400 transition-colors duration-200">
+                            <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
+                            <h3 className="text-xl font-bold text-yellow-500 mb-4   drop-shadow-sm tracking-wide">Projectoverzicht</h3>
+                            {project.description.map((desc, i) => (
+                                <p className="text-gray-200 mb-3" key={i}>{desc}</p>
+                            ))}
+                        </div>
+                    </div>
+
+                    {project.screenshots && project.screenshots.length > 0 && (
+                        <div className="lg:col-span-4 flex flex-col items-center gap-6">
+                            {project.screenshots.map((s, i) => (
+                                <div
+                                    key={i}
+                                    className="relative w-full flex flex-col items-center border border-white/30 shadow-lg rounded-2xl p-4 backdrop-blur-md overflow-hidden hover:border-violet-400 transition-colors duration-200"
+                                >
+                                    <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
+                                    <img
+                                        src={s.src}
+                                        alt={s.caption || `Screenshot ${i + 1}`}
+                                        className="rounded-xl shadow-lg max-h-72 object-contain mb-2"
+                                    />
+                                    {s.caption && (
+                                        <span className="text-gray-200 text-sm">{s.caption}</span>
+                                    )}
+                                </div>
+                            ))}
+                        </div>
+                    )}
+
+                    <div className="lg:col-span-4 flex items-center">
+                        {project.videoPromo && (
+                            <div className="relative w-full rounded-2xl shadow-lg overflow-hidden border border-white/30 flex flex-col p-6 gap-4 backdrop-blur-md hover:border-violet-400 transition-colors duration-200">
+                                <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
+                                <h3 className="text-xl font-bold text-yellow-500   drop-shadow-sm tracking-wide">Promotie video</h3>
+                                <div className="">
+                                    <p className="text-gray-200 text-base leading-relaxed">
+                                        Hier is een promotie filmpje te zien van onze applicatie.
+                                    </p>
+                                </div>
+                                <div className="w-full aspect-video rounded-xl overflow-hidden shadow-inner">
+                                    <iframe
+                                        className="w-full h-full"
+                                        src={project.videoPromo}
+                                        title="YouTube video player"
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerPolicy="strict-origin-when-cross-origin"
+                                        allowFullScreen
+                                        aria-label="Stage project video"
+                                    ></iframe>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+
+                    <div className="lg:col-span-4 flex items-center">
+                        {project.videoDemo && (
+                            <div className="relative w-full rounded-2xl shadow-lg overflow-hidden border border-white/30 flex flex-col p-6 gap-4 backdrop-blur-md hover:border-violet-400 transition-colors duration-200">
+                                <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
+                                <h3 className="text-xl font-bold text-yellow-500   drop-shadow-sm tracking-wide">Demo</h3>
+
+                                <div className="mb-2">
+                                    <p className="text-gray-200 text-base leading-relaxed">
+                                        {project.demoDesc}
+                                    </p>
+                                </div>
+                                <div className="w-full aspect-video rounded-xl overflow-hidden shadow-inner">
+                                    <iframe
+                                        className="w-full h-full"
+                                        src={project.videoDemo}
+                                        title="YouTube demo video"
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerPolicy="strict-origin-when-cross-origin"
+                                        allowFullScreen
+                                        aria-label="Stage project video"
+                                    ></iframe>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+
+                    <div className="lg:col-span-4 flex flex-col justify-center">
+                        <div className="relative border border-white/30 shadow-lg rounded-2xl p-6 backdrop-blur-md overflow-hidden hover:border-violet-400 transition-colors duration-200">
+                            <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
+                            <h3 className="text-xl font-bold text-yellow-500 mb-4  drop-shadow-sm tracking-wide">Mijn bijdrage</h3>
+                            <p className="text-gray-200 whitespace-pre-line">{project.contribution}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            className="fixed inset-0 z-40"
+            onClick={onClose}
+            aria-label="Sluit modal"
+            tabIndex={-1}
+        />
+    </div>
+);
 }
 export default function Projects() {
     const [selected, setSelected] = useState(null);
