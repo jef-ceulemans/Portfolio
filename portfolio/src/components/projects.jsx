@@ -132,6 +132,9 @@ Verder creëerde ik de aanmeldpagina voor de ploegen, waar teams op de wedstrijd
     },
 ];
 
+const NAVBAR_HEIGHT = 64; 
+const FOOTER_HEIGHT = 48; 
+const EXTRA_MARGIN = 16;  
 
 function ProjectModal({ project, onClose }) {
     useEffect(() => {
@@ -147,31 +150,54 @@ function ProjectModal({ project, onClose }) {
 
     if (!project) return null;
 
+        const modalMaxHeight = `calc(100vh - ${NAVBAR_HEIGHT + FOOTER_HEIGHT + EXTRA_MARGIN * 2}px)`;
+
+
     if (project.id === 2) {
+    const NAVBAR_HEIGHT = 64;
+    const FOOTER_HEIGHT = 48;
+    const EXTRA_MARGIN = 16;
+
+    const modalMaxHeight = `calc(100vh - ${NAVBAR_HEIGHT + FOOTER_HEIGHT + EXTRA_MARGIN * 2}px)`;
+
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm">
-            <div className="relative z-50 w-full max-w-7xl mx-auto px-2 sm:px-6">
-                <div className="relative bg-black/80 border border-white/30 rounded-2xl p-4 sm:p-10 shadow-2xl max-h-[96vh] sm:max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden mt-32 sm:mt-24 mb-10">
+        <div
+            className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm"
+            style={{
+                paddingTop: NAVBAR_HEIGHT + EXTRA_MARGIN,
+                paddingBottom: EXTRA_MARGIN,
+                paddingLeft: 8,
+                paddingRight: 8,
+                boxSizing: "border-box",
+            }}
+        >
+            <div className="relative z-50 w-full max-w-7xl mx-auto box-border">
+                <div
+                    className="relative bg-black/80 border border-white/30 rounded-2xl p-4 sm:p-10 shadow-2xl max-w-full overflow-y-auto backdrop-blur-md overflow-hidden"
+                    style={{
+                        maxHeight: modalMaxHeight,
+                    }}
+                >
                     <button
                         onClick={onClose}
-                        className="sticky top-0 right-0 ml-auto  z-50 block text-4xl text-yellow-500 hover:text-yellow-400  rounded-full w-12 h-12 flex items-center justify-center p-2"
+                        className="sticky top-0 right-0 ml-auto z-50 block text-4xl text-yellow-500 hover:text-yellow-400 rounded-full w-12 h-12 flex items-center justify-center p-2"
                         aria-label="Sluit modal"
                     >
                         &times;
                     </button>
-                    <h3 className="lg:col-span-8 text-violet-400 text-3xl font-bold mb-10  text-center">{project.title}</h3>
+                    <h3 className="lg:col-span-8 text-violet-400 text-3xl font-bold mb-10 text-center">{project.title}</h3>
                     <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-8">
                         <div className="lg:col-span-4 flex flex-col justify-start gap-6">
-                            <div className="relative border border-white/30 shadow-lg rounded-2xl p-6  backdrop-blur-md overflow-hidden hover:border-violet-400 transition-colors duration-200">
+                            <div className="relative border border-white/30 shadow-lg rounded-2xl p-6 backdrop-blur-md overflow-hidden hover:border-violet-400 transition-colors duration-200">
                                 <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
-                                <h3 className="text-xl font-bold text-yellow-500 mb-4   drop-shadow-sm tracking-wide">Projectoverzicht</h3>
+                                <h3 className="text-xl font-bold text-yellow-500 mb-4 drop-shadow-sm tracking-wide">Projectoverzicht</h3>
                                 {project.description.map((desc, i) => (
-                                    <p className="text-gray-200 " key={i}>{desc}</p>
+                                    <p className="text-gray-200" key={i}>{desc}</p>
                                 ))}
                             </div>
-                            <div className="relative border border-white/30 shadow-lg rounded-2xl p-6  backdrop-blur-md overflow-hidden hover:border-violet-400 transition-colors duration-200">
+                            <div className="relative border border-white/30 shadow-lg rounded-2xl p-6 backdrop-blur-md overflow-hidden hover:border-violet-400 transition-colors duration-200">
                                 <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
-                                <h3 className="text-xl font-bold text-yellow-500 mb-4  drop-shadow-sm tracking-wide">Mijn bijdrage</h3>
+                                <h3 className="text-xl font-bold text-yellow-500 mb-4 drop-shadow-sm tracking-wide">Mijn bijdrage</h3>
                                 <p className="text-gray-200 whitespace-pre-line">{project.contribution}</p>
                             </div>
                         </div>
@@ -179,7 +205,7 @@ function ProjectModal({ project, onClose }) {
                             {project.screenshots && project.screenshots.map((s, i) => (
                                 <div
                                     key={i}
-                                    className="relative w-full flex flex-col items-center border border-white/30 shadow-lg rounded-2xl p-4  backdrop-blur-md overflow-hidden hover:border-violet-400 transition-colors duration-200"
+                                    className="relative w-full flex flex-col items-center border border-white/30 shadow-lg rounded-2xl p-4 backdrop-blur-md overflow-hidden hover:border-violet-400 transition-colors duration-200"
                                 >
                                     <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
                                     <img
@@ -224,22 +250,42 @@ function ProjectModal({ project, onClose }) {
     );
 }
 
-   if (project.id === 3) {
+if (project.id === 3) {
+    const NAVBAR_HEIGHT = 64;
+    const FOOTER_HEIGHT = 48;
+    const EXTRA_MARGIN = 16;
+
+    const modalMaxHeight = `calc(100vh - ${NAVBAR_HEIGHT + FOOTER_HEIGHT + EXTRA_MARGIN * 2}px)`;
+
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm p-2 sm:p-6">
+        <div
+            className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm"
+            style={{
+                paddingTop: NAVBAR_HEIGHT + EXTRA_MARGIN,
+                paddingBottom:  EXTRA_MARGIN,
+                paddingLeft: 8,
+                paddingRight: 8,
+                boxSizing: "border-box",
+            }}
+        >
             <div className="relative z-50 w-full max-w-7xl mx-auto box-border">
-                <div className="relative bg-black/80 border border-white/30 rounded-2xl p-4 sm:p-10 shadow-2xl max-w-full max-h-[96vh] sm:max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden mt-32 sm:mt-24 mb-10">
+                <div
+                    className="relative bg-black/80 border border-white/30 rounded-2xl p-4 sm:p-10 shadow-2xl max-w-full overflow-y-auto backdrop-blur-md overflow-hidden"
+                    style={{
+                        maxHeight: modalMaxHeight,
+                    }}
+                >
                     <button
                         onClick={onClose}
-                        className="sticky top-0 right-0 ml-auto  z-50 block text-4xl text-yellow-500 hover:text-yellow-400  rounded-full w-12 h-12 flex items-center justify-center p-2"
+                        className="sticky top-0 right-0 ml-auto z-50 block text-4xl text-yellow-500 hover:text-yellow-400 rounded-full w-12 h-12 flex items-center justify-center p-2"
                         aria-label="Sluit modal"
                     >
                         &times;
                     </button>
-                    <h3 className="lg:col-span-8 text-violet-400 text-3xl font-bold mb-10  text-center">{project.title}</h3>
+                    <h3 className="lg:col-span-8 text-violet-400 text-3xl font-bold mb-10 text-center">{project.title}</h3>
                     <div className="relative border border-white/30 shadow-lg rounded-2xl p-6 mb-8 backdrop-blur-md overflow-hidden hover:border-violet-400 transition-colors duration-200">
                         <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
-                        <h3 className="text-xl font-bold text-yellow-500 mb-4   drop-shadow-sm tracking-wide">Projectoverzicht</h3>
+                        <h3 className="text-xl font-bold text-yellow-500 mb-4 drop-shadow-sm tracking-wide">Projectoverzicht</h3>
                         {project.description.map((desc, i) => (
                             <p className="text-gray-200 mb-3" key={i}>{desc}</p>
                         ))}
@@ -290,14 +336,34 @@ function ProjectModal({ project, onClose }) {
         </div>
     );
 }
-    if (project.id === 4) {
+if (project.id === 4) {
+    const NAVBAR_HEIGHT = 64;
+    const FOOTER_HEIGHT = 48;
+    const EXTRA_MARGIN = 16;
+
+    const modalMaxHeight = `calc(100vh - ${NAVBAR_HEIGHT + FOOTER_HEIGHT + EXTRA_MARGIN * 2}px)`;
+
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm p-2 sm:p-6">
+        <div
+            className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm"
+            style={{
+                paddingTop: NAVBAR_HEIGHT + EXTRA_MARGIN,
+                paddingBottom: EXTRA_MARGIN,
+                paddingLeft: 8,
+                paddingRight: 8,
+                boxSizing: "border-box",
+            }}
+        >
             <div className="relative z-50 w-full max-w-7xl mx-auto box-border">
-                <div className="relative bg-black/80 border border-white/30 rounded-2xl p-4 sm:p-10 shadow-2xl max-w-full max-h-[96vh] sm:max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden mt-32 sm:mt-24 mb-10">
+                <div
+                    className="relative bg-black/80 border border-white/30 rounded-2xl p-4 sm:p-10 shadow-2xl max-w-full overflow-y-auto backdrop-blur-md overflow-hidden"
+                    style={{
+                        maxHeight: modalMaxHeight,
+                    }}
+                >
                     <button
                         onClick={onClose}
-                        className="sticky top-0 right-0 ml-auto  z-50 block text-4xl text-yellow-500 hover:text-yellow-400  rounded-full w-12 h-12 flex items-center justify-center p-2"
+                        className="sticky top-0 right-0 ml-auto z-50 block text-4xl text-yellow-500 hover:text-yellow-400 rounded-full w-12 h-12 flex items-center justify-center p-2"
                         aria-label="Sluit modal"
                     >
                         &times;
@@ -305,7 +371,7 @@ function ProjectModal({ project, onClose }) {
                     <h3 className="lg:col-span-8 text-violet-400 text-3xl font-bold mb-10 text-center">{project.title}</h3>
                     <div className="relative border border-white/30 shadow-lg rounded-2xl p-6 mb-8 backdrop-blur-md overflow-hidden hover:border-violet-400 transition-colors duration-200">
                         <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
-                        <h3 className="text-xl font-bold text-yellow-500 mb-4   drop-shadow-sm tracking-wide">Projectoverzicht</h3>
+                        <h3 className="text-xl font-bold text-yellow-500 mb-4 drop-shadow-sm tracking-wide">Projectoverzicht</h3>
                         {project.description.map((desc, i) => (
                             <p className="text-gray-200 mb-3 whitespace-pre-line" key={i}>{desc}</p>
                         ))}
@@ -315,7 +381,7 @@ function ProjectModal({ project, onClose }) {
                         <div className="lg:col-span-5 flex flex-col justify-start gap-6 self-center">
                             <div className="relative border border-white/30 shadow-lg rounded-2xl p-6 backdrop-blur-md overflow-hidden hover:border-violet-400 transition-colors duration-200">
                                 <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
-                                <h3 className="text-xl font-bold text-yellow-500 mb-4  drop-shadow-sm tracking-wide">Mijn bijdrage</h3>
+                                <h3 className="text-xl font-bold text-yellow-500 mb-4 drop-shadow-sm tracking-wide">Mijn bijdrage</h3>
                                 <p className="text-gray-200 whitespace-pre-line">{project.contribution}</p>
                             </div>
                         </div>
@@ -324,7 +390,7 @@ function ProjectModal({ project, onClose }) {
                             {project.videoDemo && (
                                 <div className="relative w-full rounded-2xl shadow-lg overflow-hidden border border-white/30 flex flex-col p-6 gap-4 backdrop-blur-md hover:border-violet-400 transition-colors duration-200">
                                     <span className="pointer-events-none absolute top-0 left-0 w-full h-1/2 rounded-t-2xl bg-gradient-to-b from-white/20 to-transparent opacity-40" />
-                                    <h3 className="text-xl font-bold text-yellow-500   drop-shadow-sm tracking-wide">Demo chronometer</h3>
+                                    <h3 className="text-xl font-bold text-yellow-500 drop-shadow-sm tracking-wide">Demo chronometer</h3>
                                     <div className="mb-1">
                                         <p className="text-gray-200 text-base leading-relaxed">
                                             {project.demoDesc}
@@ -397,11 +463,31 @@ function ProjectModal({ project, onClose }) {
         </div>
     );
 }
-    if (project.id === 5) {
+if (project.id === 5) {
+    const NAVBAR_HEIGHT = 64;
+    const FOOTER_HEIGHT = 48;
+    const EXTRA_MARGIN = 16;
+
+    const modalMaxHeight = `calc(100vh - ${NAVBAR_HEIGHT + FOOTER_HEIGHT + EXTRA_MARGIN * 2}px)`;
+
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm p-2 sm:p-6">
+        <div
+            className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm"
+            style={{
+                paddingTop: NAVBAR_HEIGHT + EXTRA_MARGIN,
+                paddingBottom:  EXTRA_MARGIN,
+                paddingLeft: 8,
+                paddingRight: 8,
+                boxSizing: "border-box",
+            }}
+        >
             <div className="relative z-50 w-full max-w-7xl mx-auto box-border">
-                <div className="mt-32 sm:mt-16 relative bg-black/80 border border-white/30 rounded-2xl p-4 sm:p-10 shadow-2xl max-w-full max-h-[96vh] sm:max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden">
+                <div
+                    className="relative bg-black/80 border border-white/30 rounded-2xl p-4 sm:p-10 shadow-2xl max-w-full overflow-y-auto backdrop-blur-md overflow-hidden"
+                    style={{
+                        maxHeight: modalMaxHeight,
+                    }}
+                >
                     <button
                         onClick={onClose}
                         className="sticky top-0 right-0 ml-auto z-50 block text-4xl text-yellow-500 hover:text-yellow-400 rounded-full w-12 h-12 flex items-center justify-center p-2"
@@ -456,12 +542,31 @@ function ProjectModal({ project, onClose }) {
     );
 }
 
-    if (project.id === 6) {
+if (project.id === 6) {
+    const NAVBAR_HEIGHT = 64;
+    const FOOTER_HEIGHT = 48;
+    const EXTRA_MARGIN = 16;
+
+    const modalMaxHeight = `calc(100vh - ${NAVBAR_HEIGHT + FOOTER_HEIGHT + EXTRA_MARGIN * 2}px)`;
+
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm p-2 sm:p-6">
-            <div className="relative z-50 w-full max-w-7xl mx-auto box-border">
-                <div className="mt-16 sm:mt-0 relative bg-black/80 border border-white/30 rounded-2xl p-4 sm:p-10 shadow-2xl max-w-full max-h-[96vh] sm:max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden">
-                    <button
+        <div
+            className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm"
+            style={{
+                paddingTop: NAVBAR_HEIGHT + EXTRA_MARGIN,
+                paddingBottom:  EXTRA_MARGIN,
+                paddingLeft: 8,
+                paddingRight: 8,
+                boxSizing: "border-box",
+            }}
+        >
+                        <div className="relative z-50 w-full max-w-7xl mx-auto box-border">
+<div
+                    className="relative bg-black/80 border border-white/30 rounded-2xl p-4 sm:p-10 shadow-2xl max-w-full overflow-y-auto backdrop-blur-md overflow-hidden"
+                    style={{
+                        maxHeight: modalMaxHeight,
+                    }}
+                >                    <button
                         onClick={onClose}
                         className="sticky top-0 right-0 ml-auto z-50 block text-4xl text-yellow-500 hover:text-yellow-400 rounded-full w-12 h-12 flex items-center justify-center p-2"
                         aria-label="Sluit modal"
@@ -487,12 +592,26 @@ function ProjectModal({ project, onClose }) {
         </div>
     );
 }
+
 return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm p-2 sm:p-6">
-        <div className="relative z-50 w-full max-w-7xl mx-auto box-border">
-            <div
-                className="mb-10 mt-16 sm:mt-24 relative bg-black/70 border border-white/30 rounded-2xl p-4 sm:p-10 shadow-2xl max-w-full max-h-[96vh] sm:max-h-[90vh] overflow-y-auto backdrop-blur-md overflow-hidden"
-            >
+    
+    
+<div
+            className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm"
+            style={{
+                paddingTop: NAVBAR_HEIGHT + EXTRA_MARGIN,
+                paddingBottom:  EXTRA_MARGIN,
+                paddingLeft: 8,
+                paddingRight: 8,
+                boxSizing: "border-box",
+            }}
+        >        <div className="relative z-50 w-full max-w-7xl mx-auto box-border">
+           <div
+                    className="relative bg-black/80 border border-white/30 rounded-2xl p-4 sm:p-10 shadow-2xl max-w-full overflow-y-auto backdrop-blur-md overflow-hidden"
+                    style={{
+                        maxHeight: modalMaxHeight,
+                    }}
+                >  
                 <button
                     onClick={onClose}
                     className="sticky top-0 right-0 ml-auto mb-2 z-50 block text-4xl text-yellow-500 hover:text-yellow-400  rounded-full w-12 h-12 flex items-center justify-center p-2"
