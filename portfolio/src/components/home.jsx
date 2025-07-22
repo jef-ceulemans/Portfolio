@@ -17,7 +17,7 @@ export default function Home() {
           strings: [
             "Hallo, ik ben Jef",
             "Ik ben een Software Developer",
-            "Afstuderend in juni 2025"
+            "Afgestudeerd in juni 2025"
           ],
           autoStart: true,
           loop: true,
